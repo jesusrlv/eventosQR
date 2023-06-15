@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 23-05-2023 a las 09:12:45
+-- Tiempo de generación: 16-06-2023 a las 00:30:10
 -- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 7.4.29
+-- Versión de PHP: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `eventosUACYA`
+-- Base de datos: `qrs`
 --
 
 -- --------------------------------------------------------
@@ -30,16 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `asistentes` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `tipo_asistente` int(11) NOT NULL,
-  `apellidos` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `apellido_m` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `curp` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `tipo_sangre` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `semestre` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `grupo` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `unidad_academica` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `carrera` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Programa',
-  `numero_control` varchar(50) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Matrícula',
+  `telefono` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `no_mesa` int(11) NOT NULL,
   `idQr` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -47,15 +40,15 @@ CREATE TABLE `asistentes` (
 -- Volcado de datos para la tabla `asistentes`
 --
 
-INSERT INTO `asistentes` (`id`, `nombre`, `tipo_asistente`, `apellidos`, `apellido_m`, `curp`, `tipo_sangre`, `semestre`, `grupo`, `unidad_academica`, `carrera`, `numero_control`, `idQr`) VALUES
-(97, 'MARCO ANTONIO', 1, 'CANCINO ', 'ANCHEYTA', 'CAAM791207HCSNNR07', 'Genérico', 'Genérico', 'Genérico', 'Unidad Académica de Contaduría y Administración', 'DOCTORADO EN IMPUESTOS                                                          ', '422055742', 'CAAM791207HCSNNR07_42205574'),
-(98, 'CELBA', 1, 'CASTILLO', 'CHAIREZ', 'CACC561125MZSSHL08', 'Genérico', 'Genérico', 'Genérico', 'Unidad Académica de Contaduría y Administración', 'DOCTORADO EN IMPUESTOS                                                          ', '39200547', 'CACC561125MZSSHL08_39200547'),
-(99, 'JORGE CARLOS', 1, 'DE LA BRENA', 'WIEDFELDT', 'BEWJ740122HDFRDR09', 'Genérico', 'Genérico', 'Genérico', 'Unidad Académica de Contaduría y Administración', 'DOCTORADO EN IMPUESTOS                                                          ', '422057132', 'BEWJ740122HDFRDR09_42205713'),
-(100, 'SALVADOR', 1, 'DEL HOYO', 'SOTO', 'HOSS721204HZSYTL06', 'Genérico', 'Genérico', 'Genérico', 'Unidad Académica de Contaduría y Administración', 'DOCTORADO EN IMPUESTOS                                                          ', '21205404', 'HOSS721204HZSYTL06_21205404'),
-(101, 'JUAN', 1, 'ESPINOZA', 'GARCIA', 'EIGJ850106HVZSRN07', 'Genérico', 'Genérico', 'Genérico', 'Unidad Académica de Contaduría y Administración', 'DOCTORADO EN IMPUESTOS                                                          ', '42205714', 'EIGJ850106HVZSRN07_42205714'),
-(102, 'NORBERTO', 1, 'ESTRADA', 'GUTIERREZ', 'EAGN650606HTSSTR09', 'Genérico', 'Genérico', 'Genérico', 'Unidad Académica de Contaduría y Administración', 'DOCTORADO EN IMPUESTOS                                                          ', '42207726', 'EAGN650606HTSSTR09_42207726'),
-(103, 'MONICA ISELA', 1, 'GALINDO ', 'COSME', 'GACM680902MDFLSN08', 'Genérico', 'Genérico', 'Genérico', 'Unidad Académica de Contaduría y Administración', 'DOCTORADO EN IMPUESTOS                                                          ', '422059652', 'GACM680902MDFLSN08_42205965'),
-(104, 'JESUS FIDEL', 1, 'HERNANDEZ', 'RODRIGUEZ', 'HERJ661015HDFRDS08', 'Genérico', 'Genérico', 'Genérico', 'Unidad Académica de Contaduría y Administración', 'DOCTORADO EN IMPUESTOS                                                          ', '422059662', 'HERJ661015HDFRDS08_42205966');
+INSERT INTO `asistentes` (`id`, `nombre`, `telefono`, `email`, `no_mesa`, `idQr`) VALUES
+(97, 'MARCO ANTONIO', '', '', 0, 'CAAM791207HCSNNR07_42205574'),
+(98, 'CELBA', '', '', 0, 'CACC561125MZSSHL08_39200547'),
+(99, 'JORGE CARLOS', '', '', 0, 'BEWJ740122HDFRDR09_42205713'),
+(100, 'SALVADOR', '', '', 0, 'HOSS721204HZSYTL06_21205404'),
+(101, 'JUAN', '', '', 0, 'EIGJ850106HVZSRN07_42205714'),
+(102, 'NORBERTO', '', '', 0, 'EAGN650606HTSSTR09_42207726'),
+(103, 'MONICA ISELA', '', '', 0, 'GACM680902MDFLSN08_42205965'),
+(104, 'JESUS FIDEL', '', '', 0, 'HERJ661015HDFRDS08_42205966');
 
 -- --------------------------------------------------------
 

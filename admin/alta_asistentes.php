@@ -149,159 +149,38 @@
 <form action="prcd/proceso_alta_asistentes.php" method="POST">
 
 <div class="row">
-  <div class="col-12 mb-3">
-    <p class="h5">Tipo de asistente</p>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="tipo_asistente" id="radio1" value="1" onchange="valorTipoAsistente()">
-      <label class="form-check-label" for="flexRadioDefault1">
-        Alumno UAZ
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="tipo_asistente" id="radio2" value="2" onchange="valorTipoAsistente()">
-      <label class="form-check-label" for="flexRadioDefault2">
-        Docente UAZ
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="tipo_asistente" id="radio3" value="3" onchange="valorTipoAsistente()">
-      <label class="form-check-label" for="flexRadioDefault2">
-        Trabajador UAZ
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="tipo_asistente" id="radio4" value="4" onchange="valorTipoAsistente()">
-      <label class="form-check-label" for="flexRadioDefault2">
-        Externo
-      </label>
-    </div>
-  </div>
-
+  
     <div class="col-6">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span>
-          <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" name="nombre" id="nombre" required disabled>
+          <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" name="nombre" id="nombre" required>
       </div>
     </div>
-
-    <div class="col-3">
-      <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1"><i class="bi bi-people-fill"></i></span>
-          <input type="text" class="form-control" placeholder="Apellidos paterno" aria-label="Apellidos" aria-describedby="basic-addon1" name="apellidos" id="apellidos" required disabled>
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1"><i class="bi bi-people-fill"></i></span>
-          <input type="text" class="form-control" placeholder="Apellidos materno" aria-label="Apellidos" aria-describedby="basic-addon1" name="apellido_m" id="apellido_m" required disabled>
-      </div>
-    </div>
-
     <div class="col-6">
       <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1"><i class="bi bi-people-fill"></i></span>
-          <input type="text" class="form-control" placeholder="CURP" aria-label="CURP" aria-describedby="basic-addon1" name="curp" id="curp" onkeyup="javascript:this.value=this.value.toUpperCase();" onblur="validarInput(this);" required disabled>
+          <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
+          <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="Teléfono" required>
       </div>
-      <div style="margin-top:-12px" class="form-text" id="CURPvalida" hidden>CURP válida.</div>
-      <div style="margin-top:-12px" class="form-text text-danger" id="CURPNovalida" hidden>CURP no válida.</div>
     </div>
-  
-  <div class="col-6">
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1"><i class="bi bi-bandaid-fill"></i></span>
-        <select class="form-select" aria-label="Default select example" name="tipo_sangre" id="tipo_sangre" required disabled>
-            <option value="" selected>Tipo de sangre</option>
-            <?php
-            while ($rowSangre = $resultadosqlSangre->fetch_assoc()){
-              echo'
-                <option value="'.$rowSangre['id'].'">'.$rowSangre['tipo_sangre'].'</option>
-              ';
-            }
-            ?>
-        </select>
+    <div class="col-6">
+      <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
+          <input type="text" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1" name="email" id="email" required>
+      </div>
     </div>
-  </div>
-
-
-  <div class="col-6">
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1"><i class="bi bi-list-ol"></i></span>
-        <select class="form-select" aria-label="Default select example" name="semestre" id="semestre" required disabled>
-            <option value="" selected>Semestre</option>
-            <?php
-            while ($rowSemestre = $resultadosqlSemestre->fetch_assoc()){
-              echo'
-                <option value="'.$rowSemestre['id'].'">'.$rowSemestre['semestre'].'</option>
-              ';
-            }
-            ?>
-        </select>
-        <span class="input-group-text" id="basic-addon1"><i class="bi bi-people-fill"></i></span>
-        <input type="text" class="form-control" placeholder="Grupo" aria-label="Grupo" aria-describedby="basic-addon1" name="grupo" id="grupo" required disabled>
+    <div class="col-6">
+      <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1"><i class="bi bi-map"></i></span>
+          <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" name="Mesa" id="Mesa" required>
+      </div>
     </div>
-  </div>
-
-  <div class="col-6">
-    <div class="input-group mb-3">
-      <span class="input-group-text" id="basic-addon1"><i class="bi bi-list-ul"></i></span>
-      <select class="form-select" aria-label="Default select example" name="unidad_academica" id="unidad_academica" required disabled>
-          <option value="" selected>Unidad Académica</option>
-          <option value="0">Sin Unidad Académica</option>
-          <?php
-          while ($rowUAcademica = $resultadoUAcademica->fetch_assoc()){
-            echo'
-              <option value="'.$rowUAcademica['id'].'">'.$rowUAcademica['unidad_academica'].'</option>
-            ';
-          }
-          ?>
-      </select>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1"><i class="bi bi-123"></i></span>
-        <input type="text" class="form-control" placeholder="Número de matrícula" aria-label="Número de matrícula" aria-describedby="basic-addon1" name="num_control" id="num_control" required disabled>
-    </div>
-  </div>
-
-  <div class="col-6">
-    <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1"><i class="bi bi-list-ul"></i></span>
-        <select class="form-select" aria-label="Default select example" name="carrera" id="carrera" required disabled>
-            <option value="" selected>Programa</option>
-            <?php
-            while ($rowPrograma = $resultadoPrograma->fetch_assoc()){
-              echo'
-                <option value="'.$rowPrograma['id'].'">'.$rowPrograma['programa'].'</option>
-              ';
-            }
-            ?>
-        </select>
-    </div>
-  </div>
-
-  <?php
-                  // include('query/query_eventos.php');
-                  
-                  // while($rowEvento = $resultadoEvento->fetch_assoc()){
-                  //   echo'
-                  //   <option value="'.$rowEvento['id'].'">'.$rowEvento['nombre'].'</option>
-                  //   ';
-                  // }
-                  ?>
- </div><!-- row -->
           <hr>
 
-
           <p class="w-100 text-end"> 
-              <button class="btn btn-primary" type="submit" id="botonRegistro" disabled><i class="bi bi-person-plus-fill"></i> Registrar</button>
+              <button class="btn btn-primary" type="submit" id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button>
             </p>
-        <!-- </div> -->
       </form>
-            <!-- <div class="col-0"></div> -->
-        <!-- </div>
-    </div> -->
+            
   
       </div>
     </div>
