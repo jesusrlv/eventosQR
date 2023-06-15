@@ -2,7 +2,7 @@
 
 // server prueba
     $servername="localhost";
-    $database="eventosUACYA"; //solo se quitó para conexión remota
+    $database="qrs"; //solo se quitó para conexión remota
     $username="root";
     $password="";
 
