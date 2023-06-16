@@ -126,7 +126,7 @@ session_start();
           <img src="../assets/brand/img/SmartEventLogoLight.png" width="auto" height="70" role="img" alt="">        
         </a>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 ms-4 justify-content-center mb-md-0" style="font-family: 'Dosis', sans-serif; font-size:18px;">
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 ms-4 justify-content-center mb-md-0">
           <li><a href="#" class="nav-link px-2 text-light"><i class="bi bi-houses"></i> Inicio</a></li>
           <li><a href="alta_eventos.php" class="nav-link px-2 text-light" hidden><i class="bi bi-plus-circle"></i> Agregar evento</a></li>
           <li><a href="alta_sitio.php" class="nav-link px-2 text-light" hidden><i class="bi bi-plus-circle"></i> Agregar sitio</a></li>
@@ -136,7 +136,6 @@ session_start();
         </ul>
 
         <div class="text-end">
-          <!-- <button type="button" class="btn btn-outline-light me-2">Login</button> -->
           <a href="query/sort.php" type="button" class="btn btn-light" >Salir</a>
         </div>
       </div>
@@ -145,12 +144,9 @@ session_start();
 
   <div class="b-example-divider">
   </div>
-
-  
-
     <div class="container-fluid w-100 h-100 mb-5 p-5">
       <div class="container text-center">
-        <img src="../assets/brand/img/SmartEventLogo.png" width="270" height="" role="img" alt="" class="p-2" style="">
+        <img src="../assets/brand/img/SmartEventLogo.png" width="270" height="" role="img" alt="" class="p-2">
         <h3 class="text-secondary mb-2" style="font-family: 'Dosis', sans-serif;">Bienvenid@<strong class="text-dark"></strong></h3>
 <!--       <p class="mt-2 display-1 mt-1 text-bold" style="font-family: 'Dosis', sans-serif; font-size: 25px;">Bienvenid@</p> -->
       <hr>
@@ -180,11 +176,11 @@ session_start();
         <div class="row mt-1 g-4">
           <div class="col-md-6">
             <div class="card mx-auto shadow-sm align-items-center" style="width: 100%; height:22rem" id="transition">
-              <div class="card-body align-items-center d-flex flex-column justify-content-center">
+              <div class="card-body align-items-center d-flex flex-column justify-content-center" style=" color:#486989;">
                   <h5 style="font-size:63px"><i class="bi bi-people-fill"></i></h5>
                   <h5 class="card-title">Pre-Registro de asistentes</h5>
                   <p class="card-text">Se pre-cargan los asistentes al evento.</p>
-                  <a href="alta_asistentes.php" class="card-link" style="text-decoration:none; color:rgba(90, 46, 116, 0.9);"><i class="bi bi-plus-circle"></i> Pre-registro</a>
+                  <a href="alta_asistentes.php" class="card-link" style="text-decoration:none; color:#486989;"><i class="bi bi-plus-circle"></i> Pre-registro</a>
               </div>
             </div>
           </div>
@@ -200,11 +196,11 @@ session_start();
           </div>
           <div class="col-md-6">
             <div class="card mx-auto shadow-sm" style="width: 100%; height:22rem" id="transition">
-              <div class="card-body align-items-center d-flex flex-column justify-content-center">
+              <div class="card-body align-items-center d-flex flex-column justify-content-center" style=" color:#486989;">
                 <h5 style="font-size:63px"><i class="bi bi-list-check"></i></h5>
                   <h5 class="card-title">Listado de asistentes</h5>
                   <p class="card-text">Listado de los asistentes al evento.</p>
-                  <a href="lista_asistentes.php" class="card-link" style="text-decoration:none; color:rgba(90, 46, 116, 0.9);"><i class="bi bi-list-check"></i> Listado</a>
+                  <a href="lista_asistentes.php" class="card-link" style="text-decoration:none; color:#486989;"><i class="bi bi-list-check"></i> Listado</a>
               </div>
             </div>
           </div>
@@ -229,7 +225,7 @@ session_start();
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <p class="col-md-12 mb-0 text-muted"><a href="/" class="col-md-4 d-flex mb-md-0 me-md-auto link-dark text-decoration-none">
-                <img src="../assets/brand/img/SmartEventLogoLight.png" width="auto" height="80" role="img" alt="" class="p-2 rounded" style="background-color:#8a608a">
+                <img src="../assets/brand/img/SmartEventLogoLight.png" width="auto" height="80" role="img" alt="" class="p-2 rounded" style="background-color:#b0b8b4;">
             </a></p>
       
     </footer>
