@@ -7,24 +7,20 @@
     $resultadoSql = $conn->query($sql);
     $rowSql = $resultadoSql->fetch_assoc();
 
-    $matricula = $rowSql['numero_control'];
-    $apellido_paterno = $rowSql['apellidos'];
-    $apellido_materno = $rowSql['apellido_m'];
-    $curp = $rowSql['curp'];
     $nombre = $rowSql['nombre'];
-    $carrera = $rowSql['carrera'];
+    $telefono = $rowSql['telefono'];
+    $email = $rowSql['email'];
+    $mesa = $rowSql['mesa'];
     $concatenado = $rowSql['idQr'];
+
     if($resultadoSql){
     echo json_encode(
         array(
             'estatus'=>1,
-            'matricula'=>$matricula,
-            'apellido_paterno'=>$apellido_paterno,
-            'apellido_materno'=>$apellido_materno,
             'nombre'=>$nombre,
-            'carrera'=>$carrera,
-            'curp'=>$curp,
-            'nombre'=>$nombre,
+            'telefono'=>$telefono,
+            'email'=>$email,
+            'mesa'=>$mesa,
             'concatenado'=>$concatenado
         ));
     }

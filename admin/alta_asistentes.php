@@ -286,34 +286,24 @@
             </div>
             <form action="prcd/proceso_editar_asistente.php" method="POST">
             <div class="modal-body">
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-123"></i></span>
-                <input type="text" class="form-control" placeholder="Matrícula" aria-label="Username" aria-describedby="basic-addon1" id="matriculaE" name="matriculaE" required>
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-people-fill"></i></span>
-                <input type="text" class="form-control" placeholder="Apellido paterno" aria-label="Username" aria-describedby="basic-addon1" id="apellido_pE" name="apellido_pE" required>
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-people-fill"></i></span>
-                <input type="text" class="form-control" placeholder="Apellido materno" aria-label="Username" aria-describedby="basic-addon1" id="apellido_mE" name="apellido_mE" required>
-              </div>
+              
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
                 <input type="text" class="form-control" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1" id="nombreE" name="nombreE" required>
               </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-bounding-box"></i></span>
-                <input type="text" class="form-control" placeholder="Carrera" aria-label="Username" aria-describedby="basic-addon1" id="carreraE" name="carreraE" required>
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-phone"></i></span>
+                <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" id="telefonoE" name="telefonoE" required>
               </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-spellcheck"></i></span>
-                <input type="text" class="form-control" placeholder="CURP" aria-label="Username" aria-describedby="basic-addon1" id="curpE" name="curpE" required>
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
+                <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" id="emailE" name="emailE" required>
               </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-spellcheck"></i></span>
-                <input type="text" class="form-control" placeholder="concatenado" aria-label="Username" aria-describedby="basic-addon1" id="concatenadoE" name="concatenadoE" >
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-diagram-2"></i></span>
+                <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" id="mesaE" name="mesaE" required>
               </div>
+              
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Editar</button>
@@ -387,28 +377,21 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
           success: function(response) {
             var jsonData = JSON.parse(JSON.stringify(response));
             // var jsonData = JSON.parse(response);
-            if(jsonData.estatus == 1){
+            if(jsonData.estatus = 1){
               var nombre = jsonData.nombre;
-              var apellido_paterno = jsonData.apellido_paterno;
-              var apellido_materno = jsonData.apellido_materno;
-              var carrera = jsonData.carrera;
-              var curp = jsonData.curp;
-              var matricula = jsonData.matricula;
+              var telefono = jsonData.telefono;
+              var email = jsonData.email;
+              var mesa = jsonData.mesa;
               var concatenado = jsonData.concatenado;
-              // var error = jsonData.error;
-              // console.log(nombre);
-              // console.log(matricula);
 
               document.getElementById("nombreE").value = nombre;
-              document.getElementById("apellido_pE").value = apellido_paterno;
-              document.getElementById("apellido_mE").value = apellido_materno;
-              document.getElementById("carreraE").value = carrera;
-              document.getElementById("curpE").value = curp;
-              document.getElementById("matriculaE").value = matricula;
+              document.getElementById("telefonoE").value = telefono;
+              document.getElementById("emailE").value = email;
+              document.getElementById("mesaE").value = mesa;
               document.getElementById("concatenadoE").value = concatenado;
 
             }
-            else if(jsonData.estatus == 0){
+            else if(jsonData.estatus = 0){
               console.log(jsonData.error)
             }
 
