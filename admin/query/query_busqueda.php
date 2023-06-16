@@ -41,6 +41,22 @@ $filaVar = $resultadoVariable->num_rows;
                 <?php
                 echo'
                 </td>
+                <td>';
+                ?>
+
+                <a href="" class="btn btn bg-primary"><i class="bi bi-envelope text-light"></i></a>
+
+                <?php
+                echo'
+                </td>
+                <td>';
+                ?>
+
+                <a href="https://web.whatsapp.com/send/?phone=<?php echo $rowVar['telefono'] ?>" target="_blank" class="btn btn bg-success"><i class="bi bi-whatsapp text-light"></i></a>
+
+                <?php
+                echo'
+                </td>
             </tr>
 
         ';
