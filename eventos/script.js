@@ -94,7 +94,7 @@
                                 icon: 'success',
                                 title: 'Usuario correcto',
                                 text: 'Credenciales correctas',
-                                footer: 'UACYA | UAZ',
+                                footer: 'Smart-Event | 2023',
                                 timer: 2000,
                               timerProgressBar: true,
                               didOpen: () => {
@@ -122,7 +122,7 @@
                                 icon: 'error',
                                 title: 'QR NO VÁLIDO',
                                 text: 'Credenciales incorrectas',
-                                footer: 'UACYA | UAZ',
+                                footer: 'Smart-Event | 2023',
                                 timer: 2000,
                                 timerProgressBar: true,
                                 didOpen: () => {
@@ -143,7 +143,7 @@
                             });
                         }
                         
-                   }           
+                  }           
                   });
                   // event.preventDefault();
                 // scanner.stop();
