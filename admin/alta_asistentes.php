@@ -221,14 +221,10 @@
           <thead>
             <tr class="text-center">
               <th scope="col">#</th>
-              <th scope="col">Matrícula</th>
-              <th scope="col">Apellido Paterno</th>
-              <th scope="col">Apellido Materno</th>
               <th scope="col">Nombre</th>
-              <th scope="col">Carrera</th>
-              <th scope="col">CURP</th>
-              <th scope="col">Acción</th>
-              <th scope="col">QR</th>
+              <th scope="col">Teléfono</th>
+              <th scope="col">Email</th>
+              <th scope="col">Mesa</th>
             </tr>
           </thead>
           <tbody id="txtHint" class="text-center">

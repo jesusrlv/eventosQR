@@ -10,7 +10,7 @@ if(empty($_POST['busqueda']) || ($_POST['busqueda'] == null)){
 }
 else if(isset($_POST['busqueda'])){
 $variable = $_POST['busqueda'];
-$var = "SELECT * FROM asistentes WHERE nombre LIKE '%$variable%' OR apellidos LIKE '%$variable%' OR apellido_m LIKE '%$variable%' OR curp LIKE '%$variable%' OR numero_control LIKE '%$variable%' ";
+$var = "SELECT * FROM asistentes WHERE nombre LIKE '%$variable%' OR telefono LIKE '%$variable%' OR email LIKE '%$variable%' OR no_mesa LIKE '%$variable%'";
 $resultadoVariable = $conn->query($var);
 $filaVar = $resultadoVariable->num_rows;
     if($filaVar > 0){
@@ -21,12 +21,10 @@ $filaVar = $resultadoVariable->num_rows;
             echo'
             <tr>
                 <td>'.$x.'</td>
-                <td>'.$rowVar['numero_control'].'</td>
-                <td>'.$rowVar['apellidos'].'</td>
-                <td>'.$rowVar['apellido_m'].'</td>
                 <td>'.$rowVar['nombre'].'</td>
-                <td>'.$rowVar['carrera'].'</td>
-                <td>'.$rowVar['curp'].'</td>
+                <td>'.$rowVar['telefono'].'</td>
+                <td>'.$rowVar['email'].'</td>
+                <td>'.$rowVar['no_mesa'].'</td>
                 <td>';
                 ?>
 

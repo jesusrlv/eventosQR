@@ -21,15 +21,12 @@
 
     session_start();
     include('../prcd/qc.php');
-    // include('../QR/phpqrcode/qrlib.php'); 
 
     date_default_timezone_set('America/Mexico_City');
                   setlocale(LC_TIME, 'es_MX.UTF-8');
     $fecha_qr = strftime("%Y-%m-%d,%H:%M:%S");
     $repetidos = 0;
     $Norepetidos = 0;
-
-    // $id = $_POST['id'];
  
     // Allowed mime types
     $fileMimes = array(
@@ -49,7 +46,6 @@
     // Validate whether selected file is a CSV file
     if (!empty($_FILES['csv']['name']) && in_array($_FILES['csv']['type'], $fileMimes))
     {
-        
  
             // Open uploaded CSV file with read-only mode
             $csvFile = fopen($_FILES['csv']['tmp_name'], 'r');
@@ -65,7 +61,7 @@
                 for($i=0;$i < $longitud;$i++) $key .= $pattern{mt_rand(0,$max)};
                 return $key;
                 }
-            // Parse data from CSV file line by line
+
              // Parse data from CSV file line by line
              $x=0;
             while (($getData = fgetcsv($csvFile, 10000, ",")) !== FALSE)
@@ -95,12 +91,10 @@
                     imageHeight: 200,
                     imageAlt: 'Eventos',
                     title: 'Asistentes agregados',
-                    text: 'Se agregaron ".$x." y se descartaron',
+                    text: 'Se agregaron ".$x." invitados',
                     confirmButtonColor: '#3085d6',
                     footer: 'Eventos'
                 }).then(function(){window.location='../alta_asistentes.php';});</script>";
-
-        
     }
     else
     {
