@@ -1,11 +1,12 @@
 $(document).ready(function() {
     $('#botonRegistro').click(function(e) {
+        e.preventDefault;
+
 // function guardarIndividual(){
-    e.preventDefault;
-    var nombre = document.getElementById("nombre").value;
-    var telefono = document.getElementById("telefono").value;
-    var email = document.getElementById("email").value;
-    var mesa = document.getElementById("mesa").value;
+    var nombre = document.getElementById("nombreAlta").value;
+    var telefono = document.getElementById("telefonoAlta").value;
+    var email = document.getElementById("emailAlta").value;
+    var mesa = document.getElementById("mesaAlta").value;
 
     $.ajax({
         type:"POST",
@@ -31,7 +32,12 @@ $(document).ready(function() {
                     imageWidth: 400,
                     imageHeight: 200,
                     imageAlt: 'Imagen',
-                  })
+                  });
+
+                document.getElementById("nombreAlta").value = "";
+                document.getElementById("telefonoAlta").value = "";
+                document.getElementById("emailAlta").value = "";
+                document.getElementById("mesaAlta").value = "";
             }
             else if(hecho = 2){
                 console.log(jsonData.error);
@@ -47,6 +53,7 @@ $(document).ready(function() {
             }
         }               
     });
+
 
 })
 
