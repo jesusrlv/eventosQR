@@ -40,12 +40,12 @@
         margin:auto;
       }
       .accordion-button:not(.collapsed) {
-          color: white;
-          background-color: #000e42;
+          /* color: white; */
+          background-color:#f3d6cb;
       }
       .accordion-button {
-          color: aliceblue;
-          background-color: #000e42;
+          /* color: aliceblue; */
+          background-color: #f3d6cb;
       }
       .accordion-button::after {
           color: aliceblue;
@@ -112,36 +112,38 @@
   </head>
   <body>
 <main class="mb-0">
-  <header class="p-3" style="background-color:#000e42;">
+  <header class="p-3" style="background-color:#8a608a">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img src="../assets/brand/img/logo.png" width="120" height="36" role="img" alt="">        
+          <img src="../assets/brand/img/SmartEventLogoLight.png" width="auto" height="70" role="img" alt="">        
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 ms-4 justify-content-center mb-md-0">
           <li><a href="index.php" class="nav-link px-2 text-light"><i class="bi bi-houses"></i> Inicio</a></li>
-          <li><a href="alta_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-plus-circle-fill"></i> Agregar evento</a></li>
-          <li><a href="#" class="nav-link px-2 text-secondary"><i class="bi bi-plus-circle-fill"></i> Pre-registro</a></li>
+          <li><a href="alta_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-plus-circle"></i> Agregar evento</a></li>
+          <li><a href="#" class="nav-link px-2 text-light"><i class="bi bi-plus-circle"></i> Pre-registro</a></li>
           <li><a href="lista_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-list-check"></i> Lista eventos</a></li>
           <li><a href="lista_asistentes.php" class="nav-link px-2 text-light"><i class="bi bi-list-check"></i> Lista asistentes</a></li>
         </ul>
 
         <div class="text-end">
           <!-- <button type="button" class="btn btn-outline-light me-2">Login</button> -->
-          <a href="query/sort.php" type="button" class="btn btn-warning">Salir</a>
+          <a href="query/sort.php" type="button " class="btn btn-light">Salir</a>
         </div>
       </div>
     </div>
   </header>
-
-  <div class="container-fluid w-75 h-100 mt-1 mb-5 p-5">
-
-    <h3 class="mt-4 mb-3 text-secondary"><i class="bi bi-people-fill"></i> Pre-carga de asistentes</h3>
+  <div class="container text-center mt-2">
+  <img src="../assets/brand/img/SmartEventLogo.png" width="170" height="" role="img" alt="" class="p-2" style="">
+  </div>
+  <div class="container-fluid  w-75 h-100 mb-5 p-3">
+  
+    <h3 class="mb-3 text-secondary "><i class="bi bi-people-fill"></i> Pre-carga de asistentes</h3>
 
       <!-- accordion -->
     <div class="accordion" id="accordionExample">
-   <div class="accordion-item">
+    <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
       <i class="bi bi-clipboard-plus-fill me-1"></i> Agregar asistente
@@ -180,6 +182,7 @@
           <hr>
 
           <p class="w-100 text-end"> 
+              <button class="btn text-white" style="background-color: rgba(90, 46, 116, 0.9);" type="submit" id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button>
               <button class="btn btn-primary" type="button" id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button>
             </p>
       </form>
@@ -199,7 +202,7 @@
       <form action="query/query_csv.php" method="post" enctype="multipart/form-data">
         <div class="input-group mb-3">
           <input class="form-control" type="file" id="formFile" name="csv">
-          <button class="btn btn-primary" type="submit"><i class="bi bi-file-earmark-arrow-up-fill"></i> Cargar archivo</button>
+          <button class="btn text-white" style="background-color: rgba(90, 46, 116, 0.9);" type="submit"><i class="bi bi-file-earmark-arrow-up"></i> Cargar archivo</button>
           </form>
         </div>
       </div>

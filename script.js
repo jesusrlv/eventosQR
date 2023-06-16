@@ -20,7 +20,7 @@
                         icon: 'success',
                         title: 'Usuario Admin',
                         text: 'Credenciales correctas',
-                        footer: 'UACYA UAZ'
+                        footer: 'Smart-Event | 2023'
                     }).then(function(){window.location='./admin/';});
                 }
                 else if (jsonData.success == "2")
@@ -30,7 +30,7 @@
                         icon: 'success',
                         title: 'Usuario Eventos',
                         text: 'Credenciales correctas',
-                        footer: 'UACYA UAZ'
+                        footer: 'Smart-Event | 2023'
                     }).then(function(){window.location='./eventos/';});
                 }
                 else if (jsonData.success == "3")
@@ -40,7 +40,7 @@
                         icon: 'success',
                         title: 'Usuario Caja',
                         text: 'Credenciales correctas',
-                        footer: 'UACYA UAZ'
+                        footer: 'Smart-Event | 2023'
                     }).then(function(){window.location='./caja/';});
                 }
                 else if (jsonData.success == "4")
@@ -50,7 +50,7 @@
                         icon: 'success',
                         title: 'Usuario Biblioteca',
                         text: 'Credenciales correctas',
-                        footer: 'UACYA UAZ'
+                        footer: 'Smart-Event | 2023'
                     }).then(function(){window.location='./biblioteca/';});
                 }
                 else if (jsonData.success == "5")
@@ -60,7 +60,7 @@
                         icon: 'success',
                         title: 'Usuario Centro de Cómputo',
                         text: 'Credenciales correctas',
-                        footer: 'UACYA UAZ'
+                        footer: 'Smart-Event | 2023'
                     }).then(function(){window.location='./centro_computo/';});
                 }
                 else
@@ -70,7 +70,7 @@
                         icon: 'error',
                         title: 'Datos incorrectos',
                         text: 'Credenciales incorrectas',
-                        footer: 'UACYA UAZ'
+                        footer: 'Smart-Event | 2023'
                     }).then(function(){window.location='index.html';});
                     // });
                 }

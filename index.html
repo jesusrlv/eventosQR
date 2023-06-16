@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="UACYA" content="Eventos UACYA">
+    <meta name="GO" content="Smart-Events">
     <meta name="generator" content="Hugo 0.104.2">
     <link rel="icon" type="image/png" href="assets/brand/img/ico.ico">
-    <title>Eventos · UACYA</title>
+    <title>Smart-Events | Login</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,6 +15,10 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
  
     <script src="script.js"></script>
 
@@ -22,8 +26,9 @@
 
     <style>
         body{
-            background-image: url(assets/brand/img/uacya_anfeca.jpg);
-            background-size: auto 100%;
+            background-image: url(assets/brand/img/mesaevento.jpg);
+            background-size: cover;
+            background-position-x: center;
         }
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -84,25 +89,25 @@
   <body class="text-center">
     <main class="form-signin w-100 m-auto" style="background-color:rgba(255,255,255,0.7);border-radius: 7px;">
         <form id="pwdForm">
-            <img class="mb-4" src="assets/brand/img/logo.png" alt="" width="auto" height="63" style="background-color:rgba(0, 14, 66, 0.9); border-radius:4px;padding: 10px 72px 10px;;">
-            <h1 class="h3 mb-3 fw-normal">Ingresar</h1>
-
+            <img class="mb-4" src="assets/brand/img/SmartEventLogo.png" alt="" width="auto" height="150" >
+            <h1 class="h4 mb-3 fw-normal" style="font-family: 'Poppins', sans-serif;">Iniciar Sesión</h1>
+            <br>
             <div class="form-floating">
             <input type="text" class="form-control" id="floatingInput" placeholder="" name="usr">
-            <label for="floatingInput">Usuario</label>
+            <label for="floatingInput" style="font-family: 'Poppins', sans-serif;">Usuario</label>
             </div>
             <div class="form-floating">
             <input type="password" class="form-control" id="floatingInput" placeholder="Password" name="pwd">
-            <label for="floatingPassword">Contraseña</label>
+            <label for="floatingPassword" style="font-family: 'Poppins', sans-serif;">Contraseña</label>
             </div>
 
             <div class="checkbox mb-3">
-            <label>
-                <a href="#"><i class="bi bi-arrow-left-circle-fill"></i> Regresar</a>
-            </label>
+<!--             <label>
+                <a href="#" style="color: rgba(90,46,116,0.9); font-family: 'Poppins', sans-serif;" ><i class="bi bi-arrow-left-circle-fill"></i> Regresar</a>
+            </label> -->
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit"><i class="bi bi-key-fill"></i> Ingresar</button>
-            <p class="mt-5 mb-3 text-muted">&copy; UACYA | UAZ<br/>2022<p>
+            <button class="w-100 btn btn-lg text-white" style="background-color: rgba(90, 46, 116, 0.9); font-family: 'Poppins', sans-serif;" type="submit"><i class="bi bi-key-fill"></i> Ingresar</button>
+            <p class="mt-5 mb-3 text-muted" style="font-family: 'Poppins', sans-serif;">&copy; Smart-Events | 2023<p>
         </form>
     </main>
   </body>
