@@ -29,6 +29,7 @@
 
     <script src="lista_asistentes.js"></script>
     <script src="script.js"></script>
+    <script src="guardar_individual.js"></script>
 
     <script src="prcd/QR/ajax_generate_code.js"></script>
 
@@ -146,7 +147,7 @@
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-<form action="prcd/proceso_alta_asistentes.php" method="POST">
+<form id="pwdForm">
 
 <div class="row">
   
@@ -159,7 +160,7 @@
     <div class="col-6">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
-          <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="Teléfono" required >
+          <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="telefono" required >
       </div>
     </div>
     <div class="col-6">
@@ -171,7 +172,7 @@
     <div class="col-6">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-map"></i></span>
-          <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" name="Mesa" id="Mesa" required>
+          <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" name="Mesa" id="mesa" required>
       </div>
     </div>
           <hr>
