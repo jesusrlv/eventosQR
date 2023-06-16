@@ -223,11 +223,16 @@
         <table class="table">
           <thead>
             <tr class="text-center">
-              <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Teléfono</th>
-              <th scope="col">Email</th>
-              <th scope="col">Mesa</th>
+              <th scope="col"><small>#</small></th>
+              <th scope="col"><small>Nombre</small></th>
+              <th scope="col"><small>Teléfono</small></th>
+              <th scope="col"><small>Email</small></th>
+              <th scope="col"><small>Mesa</small></th>
+              <th scope="col"><small>Editar</small></th>
+              <th scope="col"><small>QR</small></th>
+              <th scope="col"><small><i class="bi bi-envelope text-primary"></i> Email</small></th>
+              <th scope="col"><small><i class="bi bi-whatsapp text-success"></i> WhatsApp</small></th>
+
             </tr>
           </thead>
           <tbody id="txtHint" class="text-center">
