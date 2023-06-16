@@ -21,6 +21,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <!-- <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 
@@ -29,6 +31,7 @@
 
     <script src="lista_asistentes.js"></script>
     <script src="script.js"></script>
+    <script src="guardar_individual.js"></script>
 
     <script src="prcd/QR/ajax_generate_code.js"></script>
 
@@ -148,38 +151,39 @@
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-<form action="prcd/proceso_alta_asistentes.php" method="POST">
+<form id="formAlta">
 
 <div class="row">
   
     <div class="col-6">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span>
-          <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" name="nombre" id="nombre" required>
+          <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" name="nombre" id="nombreAlta" required>
       </div>
     </div>
     <div class="col-6">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
-          <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="Teléfono" required>
+          <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="telefonoAlta" required >
       </div>
     </div>
     <div class="col-6">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
-          <input type="text" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1" name="email" id="email" required>
+          <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" name="email" id="emailAlta" required>
       </div>
     </div>
     <div class="col-6">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-map"></i></span>
-          <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" name="Mesa" id="Mesa" required>
+          <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" name="Mesa" id="mesaAlta" required>
       </div>
     </div>
           <hr>
 
           <p class="w-100 text-end"> 
               <button class="btn text-white" style="background-color: rgba(90, 46, 116, 0.9);" type="submit" id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button>
+              <button class="btn btn-primary" type="button" id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button>
             </p>
       </form>
             
@@ -220,14 +224,10 @@
           <thead>
             <tr class="text-center">
               <th scope="col">#</th>
-              <th scope="col">Matrícula</th>
-              <th scope="col">Apellido Paterno</th>
-              <th scope="col">Apellido Materno</th>
               <th scope="col">Nombre</th>
-              <th scope="col">Carrera</th>
-              <th scope="col">CURP</th>
-              <th scope="col">Acción</th>
-              <th scope="col">QR</th>
+              <th scope="col">Teléfono</th>
+              <th scope="col">Email</th>
+              <th scope="col">Mesa</th>
             </tr>
           </thead>
           <tbody id="txtHint" class="text-center">
@@ -289,34 +289,24 @@
             </div>
             <form action="prcd/proceso_editar_asistente.php" method="POST">
             <div class="modal-body">
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-123"></i></span>
-                <input type="text" class="form-control" placeholder="Matrícula" aria-label="Username" aria-describedby="basic-addon1" id="matriculaE" name="matriculaE" required>
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-people-fill"></i></span>
-                <input type="text" class="form-control" placeholder="Apellido paterno" aria-label="Username" aria-describedby="basic-addon1" id="apellido_pE" name="apellido_pE" required>
-              </div>
-              <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-people-fill"></i></span>
-                <input type="text" class="form-control" placeholder="Apellido materno" aria-label="Username" aria-describedby="basic-addon1" id="apellido_mE" name="apellido_mE" required>
-              </div>
+              
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
                 <input type="text" class="form-control" placeholder="Nombre" aria-label="Username" aria-describedby="basic-addon1" id="nombreE" name="nombreE" required>
               </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-bounding-box"></i></span>
-                <input type="text" class="form-control" placeholder="Carrera" aria-label="Username" aria-describedby="basic-addon1" id="carreraE" name="carreraE" required>
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-phone"></i></span>
+                <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" id="telefonoE" name="telefonoE" required>
               </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-spellcheck"></i></span>
-                <input type="text" class="form-control" placeholder="CURP" aria-label="Username" aria-describedby="basic-addon1" id="curpE" name="curpE" required>
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
+                <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" id="emailE" name="emailE" required>
               </div>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-spellcheck"></i></span>
-                <input type="text" class="form-control" placeholder="concatenado" aria-label="Username" aria-describedby="basic-addon1" id="concatenadoE" name="concatenadoE" >
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-diagram-2"></i></span>
+                <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" id="mesaE" name="mesaE" required>
               </div>
+              
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Editar</button>
@@ -390,28 +380,21 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
           success: function(response) {
             var jsonData = JSON.parse(JSON.stringify(response));
             // var jsonData = JSON.parse(response);
-            if(jsonData.estatus == 1){
+            if(jsonData.estatus = 1){
               var nombre = jsonData.nombre;
-              var apellido_paterno = jsonData.apellido_paterno;
-              var apellido_materno = jsonData.apellido_materno;
-              var carrera = jsonData.carrera;
-              var curp = jsonData.curp;
-              var matricula = jsonData.matricula;
+              var telefono = jsonData.telefono;
+              var email = jsonData.email;
+              var mesa = jsonData.mesa;
               var concatenado = jsonData.concatenado;
-              // var error = jsonData.error;
-              // console.log(nombre);
-              // console.log(matricula);
 
               document.getElementById("nombreE").value = nombre;
-              document.getElementById("apellido_pE").value = apellido_paterno;
-              document.getElementById("apellido_mE").value = apellido_materno;
-              document.getElementById("carreraE").value = carrera;
-              document.getElementById("curpE").value = curp;
-              document.getElementById("matriculaE").value = matricula;
+              document.getElementById("telefonoE").value = telefono;
+              document.getElementById("emailE").value = email;
+              document.getElementById("mesaE").value = mesa;
               document.getElementById("concatenadoE").value = concatenado;
 
             }
-            else if(jsonData.estatus == 0){
+            else if(jsonData.estatus = 0){
               console.log(jsonData.error)
             }
 

@@ -57,23 +57,29 @@ function valorTipoAsistente(){
     }
 }
 // solo números
-function ValidaSoloNumeros() {
-    if ((event.keyCode < 48) || (event.keyCode > 49)) 
-      event.returnValue = false;
-}
+$(function(){
+    $("#Telefono").keydown(function(event){
+        //alert(event.keyCode);
+        if((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105) && event.keyCode !==190  && event.keyCode !==110 && event.keyCode !==8 && event.keyCode !==9  ){
+            return false;
+        }
+    });
+});
+$(function(){
+    $("#Mesa").keydown(function(event){
+        //alert(event.keyCode);
+        if((event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105) && event.keyCode !==190  && event.keyCode !==110 && event.keyCode !==8 && event.keyCode !==9  ){
+            return false;
+        }
+    });
+});
 
 //   VALIDACIÓN CURP
         function validarInput(input) {
             var curp = input.value.toUpperCase(),
                 resultado = document.getElementById("result-username"),
                 valido = "No válido";
-                
-            // if (curpValida(curp)) {
-            //     valido = "Válido";
-            //     resultado.innerHTML ='<div class="alert alert-success text-start"><strong><i class="bi bi-check-square"></i> CORRECTO. </strong> Cadena CURP correcta.</div>';
-            // } else {
-            //     resultado.innerHTML = '<div class="alert alert-danger"><strong><i class="bi bi-exclamation-triangle-fill"></i> ERROR. </strong> Cadena CURP incorrecta.</div><style>#boton_submit{display:none;}</style>';
-            // }
+            
             if (curpValida(curp)) {
                 valido = "Válido";
                 alert("CURP válida");
