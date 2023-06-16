@@ -8,6 +8,12 @@ $(document).ready(function() {
     var email = document.getElementById("emailAlta").value;
     var mesa = document.getElementById("mesaAlta").value;
 
+    if (nombre == "" || telefono == "" || email == "" || mesa==""){
+        alert("Se deben llenar todos los campos");
+        return;
+    }
+    else {
+
     $.ajax({
         type:"POST",
         url:"prcd/proceso_alta_individual.php",
@@ -51,9 +57,10 @@ $(document).ready(function() {
                     imageAlt: 'Imagen',
                   })
             }
-        }               
-    });
+        } 
 
+    });
+}
 
 })
 
