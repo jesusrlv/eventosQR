@@ -5,6 +5,9 @@ $nombre = $_POST['nombre'];
 $telefono = $_POST['telefono'];
 $email = $_POST['email'];
 $mesa = $_POST['mesa'];
+$internacional = $_POST['internacional'];
+
+$telefono = $internacional.''.$telefono;
 
 function generarCodigo($longitud) {
     $key = '';

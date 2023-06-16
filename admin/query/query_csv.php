@@ -23,11 +23,11 @@
     include('../prcd/qc.php');
 
     date_default_timezone_set('America/Mexico_City');
-                  setlocale(LC_TIME, 'es_MX.UTF-8');
+                setlocale(LC_TIME, 'es_MX.UTF-8');
     $fecha_qr = strftime("%Y-%m-%d,%H:%M:%S");
     $repetidos = 0;
     $Norepetidos = 0;
- 
+
     // Allowed mime types
     $fileMimes = array(
         'text/x-comma-separated-values',
@@ -63,7 +63,7 @@
                 }
 
              // Parse data from CSV file line by line
-             $x=0;
+            $x=0;
             while (($getData = fgetcsv($csvFile, 10000, ",")) !== FALSE)
             {
                 $x++;
@@ -72,13 +72,17 @@
 
                 // Get row data
                 $nombre = $getData[0];
-                $telefono = $getData[1];
-                $email = $getData[2];
-                $mesa = $getData[3];
+                $pais =$getData[1];
+                $telefono = $getData[2];
+                $email = $getData[3];
+                $mesa = $getData[4];
+                $tipo = $getData[5];
 
-                $idQr = $telefono.'_'.$codigo;
+                $telefono = $pais.''.$telefono;
+
+                $idQr = $codigo;
                                 
-                    mysqli_query($conn, "INSERT INTO asistentes (nombre, telefono, email, no_mesa,idQr) VALUES ('" . $nombre . "', '" . $telefono . "', '" . $email . "', '" . $mesa . "', '" . $idQr . "')");
+                    mysqli_query($conn, "INSERT INTO asistentes (nombre, telefono, email, no_mesa, tipo_invitado, idQr) VALUES ('" . $nombre . "', '" . $telefono . "', '" . $email . "', '" . $mesa . "','".$tipo."', '" . $idQr . "')");
             }
 
             // Close opened CSV file

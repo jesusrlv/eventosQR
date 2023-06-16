@@ -152,11 +152,9 @@
             <th scope="col">Teléfono (WA)</th>
             <th scope="col">E-mail</th>
             <th scope="col">No. Mesa</th>
-            <!-- <th scope="col">Unidad académica</th>
-            <th scope="col">Matrícula</th>
-            <th scope="col">Programa</th>
-            <th scope="col">Fecha/Hora</th>
-            <th scope="col">Constancia (PDF)</th> -->
+            <th scope="col"><small>QR</small></th>
+            <th scope="col"><small><i class="bi bi-envelope text-primary"></i> Email</small></th>
+            <th scope="col"><small><i class="bi bi-whatsapp text-success"></i> WhatsApp</small></th>
             </tr>
         </thead>
         <tbody id="myTable">

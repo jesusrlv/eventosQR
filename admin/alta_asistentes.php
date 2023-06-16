@@ -165,8 +165,13 @@
     </div>
     <div class="col-6">
       <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
-          <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="telefonoAlta" required >
+        <select class="form-select" id="internacional" aria-label="Default select example">
+          <option selected>Sel...</option>
+          <option value="52">Mex</option>
+          <option value="">Otro</option>
+        </select>
+        <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
+        <input type="text" class="form-control" style="width: 75%;" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="telefonoAlta" required >
       </div>
     </div>
     <div class="col-6">
@@ -184,7 +189,7 @@
           <hr>
 
           <p class="w-100 text-end"> 
-              <button class="btn text-white" style="background-color: rgba(90, 46, 116, 0.9);" type="submit" id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button>
+              <button class="btn text-white" style="background-color: rgba(90, 46, 116, 0.9);" type="button"  id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button>
               <!-- <button class="btn btn-primary" type="button" id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button> -->
             </p>
       </form>
