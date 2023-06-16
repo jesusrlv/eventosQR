@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 16-06-2023 a las 00:30:10
+-- Tiempo de generación: 16-06-2023 a las 16:51:16
 -- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 7.4.28
+-- Versión de PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,7 +32,7 @@ CREATE TABLE `asistentes` (
   `nombre` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `telefono` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `no_mesa` int(11) NOT NULL,
+  `no_mesa` varchar(2) COLLATE utf8_unicode_ci DEFAULT NULL,
   `idQr` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -41,14 +41,29 @@ CREATE TABLE `asistentes` (
 --
 
 INSERT INTO `asistentes` (`id`, `nombre`, `telefono`, `email`, `no_mesa`, `idQr`) VALUES
-(97, 'MARCO ANTONIO', '', '', 0, 'CAAM791207HCSNNR07_42205574'),
-(98, 'CELBA', '', '', 0, 'CACC561125MZSSHL08_39200547'),
-(99, 'JORGE CARLOS', '', '', 0, 'BEWJ740122HDFRDR09_42205713'),
-(100, 'SALVADOR', '', '', 0, 'HOSS721204HZSYTL06_21205404'),
-(101, 'JUAN', '', '', 0, 'EIGJ850106HVZSRN07_42205714'),
-(102, 'NORBERTO', '', '', 0, 'EAGN650606HTSSTR09_42207726'),
-(103, 'MONICA ISELA', '', '', 0, 'GACM680902MDFLSN08_42205965'),
-(104, 'JESUS FIDEL', '', '', 0, 'HERJ661015HDFRDS08_42205966');
+(97, 'MARCO ANTONIO', '', '', '0', 'CAAM791207HCSNNR07_42205574'),
+(98, 'CELBA', '', '', '0', 'CACC561125MZSSHL08_39200547'),
+(99, 'JORGE CARLOS', '', '', '0', 'BEWJ740122HDFRDR09_42205713'),
+(100, 'SALVADOR', '', '', '0', 'HOSS721204HZSYTL06_21205404'),
+(101, 'JUAN', '', '', '0', 'EIGJ850106HVZSRN07_42205714'),
+(102, 'NORBERTO', '', '', '0', 'EAGN650606HTSSTR09_42207726'),
+(103, 'MONICA ISELA', '', '', '0', 'GACM680902MDFLSN08_42205965'),
+(104, 'JESUS FIDEL', '', '', '0', 'HERJ661015HDFRDS08_42205966'),
+(107, 'Jesusrlv', '4927951930', 'jesusrlvrojo@gmail.com', '1', '4927951930_jdp5gp7mo'),
+(108, 'Jesusrlv', '4927951930', 'jesusrlvrojo@gmail.com', '1', '4927951930_amx17iidi'),
+(109, 'Jesus', '4927951930', 'e@w.vpo', '1', '4927951930_uyufki0lr'),
+(110, 'Jesus', '4927951930', 'e@w.vpo', '1', '4927951930_v1u7e6u7e'),
+(111, 'Jesus', '4927951930', 'jesusrlvrojo@gmail.com', '1', '4927951930_xthy2yf6r'),
+(112, 'Jesus', '4927951930', 'jesusrlvrojo@gmail.com', '1', '4927951930_fdqbndook'),
+(114, 'Jesus 2', '4927951931', 'jesusrlv1@dd.net', '2', '4927951931_7cvg079dp'),
+(115, 'Jesus 2', '4927951931', 'jesusrlv1@dd.net', '2', '4927951931_sibgpq7vi'),
+(116, 'Jesus 3', '4927951932', 'jesusrlv2@dd.net', '3', '4927951932_f82wyxeb2'),
+(117, 'Jesus 4', '4927951933', 'jesusrlv3@dd.net', '4', '4927951933_a2dd7juoe'),
+(118, 'Ana 1', '4927951934', 'jesusrlv4@dd.net', '5', '4927951934_kafb3tgt1'),
+(119, 'Jesus 2', '4927951931', 'jesusrlv1@dd.net', '2', '4927951931_jjiesdzla'),
+(120, 'Jesus 3', '4927951932', 'jesusrlv2@dd.net', '3', '4927951932_wbduuyieu'),
+(121, 'Jesus 4', '4927951933', 'jesusrlv3@dd.net', '4', '4927951933_51ldjhmdo'),
+(122, 'Ana 1', '4927951934', 'jesusrlv4@dd.net', '5', '4927951934_bcceqc1k7');
 
 -- --------------------------------------------------------
 
@@ -391,7 +406,7 @@ ALTER TABLE `usr`
 -- AUTO_INCREMENT de la tabla `asistentes`
 --
 ALTER TABLE `asistentes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 
 --
 -- AUTO_INCREMENT de la tabla `eventos`
