@@ -159,13 +159,13 @@
     <div class="col-6">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
-          <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="Teléfono" required>
+          <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="Teléfono" required >
       </div>
     </div>
     <div class="col-6">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
-          <input type="text" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1" name="email" id="email" required>
+          <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" name="email" id="email" required>
       </div>
     </div>
     <div class="col-6">
