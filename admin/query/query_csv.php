@@ -42,23 +42,23 @@
         'application/vnd.msexcel',
         'text/plain'
     );
- 
+
     // Validate whether selected file is a CSV file
     if (!empty($_FILES['csv']['name']) && in_array($_FILES['csv']['type'], $fileMimes))
     {
- 
+
             // Open uploaded CSV file with read-only mode
             $csvFile = fopen($_FILES['csv']['tmp_name'], 'r');
- 
+
             // Skip the first line
             fgetcsv($csvFile);
- 
+
 
             function generarCodigo($longitud) {
                 $key = '';
                 $pattern = '1234567890abcdefghijklmnopqrstuvwxyz';
                 $max = strlen($pattern)-1;
-                for($i=0;$i < $longitud;$i++) $key .= $pattern{mt_rand(0,$max)};
+                for($i=0;$i < $longitud;$i++) $key .= $pattern[mt_rand(0,$max)];
                 return $key;
                 }
 
@@ -78,7 +78,7 @@
                 $mesa = $getData[4];
                 $tipo = $getData[5];
 
-                // $telefono = $pais.''.$telefono;
+                $telefono = $pais.''.$telefono;
 
                 $idQr = $codigo;
                                 

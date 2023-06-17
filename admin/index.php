@@ -199,7 +199,7 @@ session_start();
               <div class="card-body align-items-center d-flex flex-column justify-content-center" style=" color:#486989;">
                 <h5 style="font-size:63px"><i class="bi bi-list-check"></i></h5>
                   <h5 class="card-title">Listado de asistentes</h5>
-                  <p class="card-text">Listado de los asistentes al evento para envío de QR.</p>
+                  <p class="card-text">Listado de los asistentes que ya hicieron Check-In.</p>
                   <a href="lista_asistentes.php" class="card-link" style="text-decoration:none; color:#486989;"><i class="bi bi-list-check"></i> Listado</a>
               </div>
             </div>

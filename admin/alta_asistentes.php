@@ -180,13 +180,19 @@
           <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" name="email" id="emailAlta" required>
       </div>
     </div>
-    <div class="col-3">
+    <div class="col-2">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-map"></i></span>
           <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" name="Mesa" id="mesaAlta" required>
       </div>
     </div>
-    <div class="col-3">
+    <div class="col-2">
+      <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill-exclamation"></i></span>
+          <input type="text" class="form-control" placeholder="PAX por mesa" aria-label="" aria-describedby="basic-addon1" name="invitadosMesa" id="paxMesa">
+      </div>
+    </div>
+    <div class="col-2">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-lines-fill"></i></span>
           <select class="form-select" id="tipoInvitado" aria-label="Default select example">
