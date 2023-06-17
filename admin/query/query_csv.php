@@ -78,7 +78,7 @@
                 $mesa = $getData[4];
                 $tipo = $getData[5];
 
-                $telefono = $pais.''.$telefono;
+                // $telefono = $pais.''.$telefono;
 
                 $idQr = $codigo;
                                 
