@@ -28,7 +28,7 @@ $queryAsistentes = "INSERT INTO asistentes(
     telefono,
     email,
     no_mesa,
-    tipo_invitado
+    tipo_invitado,
     idQr
     ) VALUES(
         '$nombre',
