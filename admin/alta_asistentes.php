@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
     <title>Alta asistentes</title>
-    <link rel="icon" type="image/png" href="../assets/brand/img/ico.ico"/>
+    <link rel="icon" type="image/png" href="../assets/brand/img/SmartEventICOLight.ico"/>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
 
@@ -121,9 +121,9 @@
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 ms-4 justify-content-center mb-md-0">
           <li><a href="index.php" class="nav-link px-2 text-light"><i class="bi bi-houses"></i> Inicio</a></li>
-          <li><a href="alta_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-plus-circle"></i> Agregar evento</a></li>
+          <!-- <li><a href="alta_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-plus-circle" hidden></i> Agregar evento</a></li> -->
           <li><a href="#" class="nav-link px-2 text-light"><i class="bi bi-plus-circle"></i> Pre-registro</a></li>
-          <li><a href="lista_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-list-check"></i> Lista eventos</a></li>
+          <!-- <li><a href="lista_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-list-check" hidden></i> Lista eventos</a></li> -->
           <li><a href="lista_asistentes.php" class="nav-link px-2 text-light"><i class="bi bi-list-check"></i> Lista asistentes</a></li>
         </ul>
 
@@ -134,8 +134,10 @@
       </div>
     </div>
   </header>
+  <div class="b-example-divider">
+  </div>
   <div class="container text-center mt-2">
-  <img src="../assets/brand/img/SmartEventLogo.png" width="170" height="" role="img" alt="" class="p-2" style="">
+  <img src="../assets/brand/img/SmartEventLogo.png" width="170" height="" role="img" alt="" class="p-2">
   </div>
   <div class="container-fluid  w-75 h-100 mb-5 p-3">
   
@@ -163,8 +165,13 @@
     </div>
     <div class="col-6">
       <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
-          <input type="text" class="form-control" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="telefonoAlta" required >
+        <span class="input-group-text" id="basic-addon1"><i class="bi bi-globe-americas"></i></span>
+        <select class="form-select" id="internacional" aria-label="Default select example">
+          <option value="52">Mex</option>
+          <option value="">Otro</option>
+        </select>
+        <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
+        <input type="text" class="form-control" style="width: 50%;" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="telefonoAlta" required >
       </div>
     </div>
     <div class="col-6">
@@ -173,17 +180,27 @@
           <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" name="email" id="emailAlta" required>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-3">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-map"></i></span>
           <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" name="Mesa" id="mesaAlta" required>
       </div>
     </div>
+    <div class="col-3">
+      <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-lines-fill"></i></span>
+          <select class="form-select" id="tipoInvitado" aria-label="Default select example">
+          <option selected>Tipo de invitado...</option>
+          <option value="1">Principal</option>
+          <option value="2">Acompañante</option>
+        </select>
+      </div>
+    </div>
           <hr>
 
           <p class="w-100 text-end"> 
-              <button class="btn text-white" style="background-color: rgba(90, 46, 116, 0.9);" type="submit" id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button>
-              <button class="btn btn-primary" type="button" id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button>
+              <button class="btn text-white" style="background-color: rgba(90, 46, 116, 0.9);" type="button"  id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button>
+              <!-- <button class="btn btn-primary" type="button" id="botonRegistro"><i class="bi bi-person-plus-fill"></i> Registrar</button> -->
             </p>
       </form>
             
@@ -223,11 +240,15 @@
         <table class="table">
           <thead>
             <tr class="text-center">
-              <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Teléfono</th>
-              <th scope="col">Email</th>
-              <th scope="col">Mesa</th>
+              <th scope="col"><small>#</small></th>
+              <th scope="col"><small>Nombre</small></th>
+              <th scope="col"><small>Teléfono</small></th>
+              <th scope="col"><small>Email</small></th>
+              <th scope="col"><small>Mesa</small></th>
+              <th scope="col"><small>Editar</small></th>
+              <th scope="col"><small>QR</small></th>
+              <th scope="col"><small><i class="bi bi-envelope text-primary"></i> Email</small></th>
+              <th scope="col"><small><i class="bi bi-whatsapp text-success"></i> WhatsApp</small></th>
             </tr>
           </thead>
           <tbody id="txtHint" class="text-center">
@@ -248,11 +269,10 @@
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <p class="col-md-12 mb-0 text-muted"><a href="/" class="col-md-4 d-flex mb-md-0 me-md-auto link-dark text-decoration-none">
-                <img src="../assets/brand/img/logo.png" width="140" height="45" role="img" alt="" class="p-2 rounded" style="background-color:#000e42">
-            </a></p>
-      
-    </footer>
-  </div>
+      <img src="../assets/brand/img/SmartEventLogoLight.png" width="auto" height="80" role="img" alt="" class="p-2 rounded" style="background-color:#b0b8b4;">
+      </a></p>
+  </footer>
+</div>
 
     <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
 

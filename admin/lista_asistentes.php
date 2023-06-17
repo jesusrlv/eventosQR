@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
     <title>Lista de asistentes</title>
-    <link rel="icon" type="image/png" href="../assets/brand/img/ico.ico"/>
+    <link rel="icon" type="image/png" href="../assets/brand/img/SmartEventICOLight.ico"/>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
 
@@ -83,24 +83,24 @@
   </head>
   <body>
 <main class="mb-0">
-  <header class="p-3" style="background-color:#000e42;">
+  <header class="p-3" style="background-color:#8a608a;">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img src="../assets/brand/img/logo.png" width="120" height="36" role="img" alt="">        
+        <img src="../assets/brand/img/SmartEventLogoLight.png" width="auto" height="70" role="img" alt="">       
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 ms-4 justify-content-center mb-md-0">
           <li><a href="index.php" class="nav-link px-2 text-light"><i class="bi bi-houses"></i> Inicio</a></li>
-          <li><a href="alta_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-plus-circle-fill"></i> Agregar evento</a></li>
-          <li><a href="alta_asistentes.php" class="nav-link px-2 text-light"><i class="bi bi-plus-circle-fill"></i> Pre-registro</a></li>
-          <li><a href="lista_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-list-check"></i> Lista eventos</a></li>
-          <li><a href="#" class="nav-link px-2 text-secondary"><i class="bi bi-list-check"></i> Lista asistentes</a></li>
+          <!-- <li><a href="alta_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-plus-circle-fill"></i> Agregar evento</a></li> -->
+          <li><a href="alta_asistentes.php" class="nav-link px-2 text-light"><i class="bi bi-plus-circle"></i> Pre-registro</a></li>
+          <!-- <li><a href="lista_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-list-check"></i> Lista eventos</a></li> -->
+          <li><a href="#" class="nav-link px-2 text-light"><i class="bi bi-list-check"></i> Lista asistentes</a></li>
         </ul>
 
         <div class="text-end">
           <!-- <button type="button" class="btn btn-outline-light me-2">Login</button> -->
-          <a href="query/sort.php" type="button" class="btn btn-warning">Salir</a>
+          <a href="query/sort.php" type="button" class="btn btn-light">Salir</a>
         </div>
       </div>
     </div>
@@ -108,9 +108,12 @@
 
   <div class="b-example-divider">
   </div>
-
-    <div class="container-fluid w-75 h-100 mt-5 mb-5 p-5">
-    <h3 class="mt-4 mb-3 text-secondary"><i class="bi bi-people-fill"></i> Lista de asistentes (eventos)</h3>
+  <div class="container text-center">
+  <img src="../assets/brand/img/SmartEventLogo.png" width="170" height="" role="img" alt="" class="p-2">
+  </div>  
+  <div class="container-fluid w-75 h-100  mb-5 p-5">
+    
+    <h3 class="mt-2 mb-3 text-secondary"><i class="bi bi-people-fill"></i> Lista de asistentes (eventos)</h3>
         <div class="input-group mb-3 w-50">
             <span class="input-group-text" id="basic-addon1"><i class="bi bi-list-ul"></i></span>
             <select class="form-select" aria-label="Default select example" onchange="cambioEvento()" id="evento">
@@ -136,24 +139,22 @@
             </div>
             <div class="col text-end">
                 <!-- <a href="#" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#documentoExcel"><i class="bi bi-file-earmark-excel-fill"></i> Cargar listado</a> -->
-                <a href="#" class="btn btn-outline-danger" id="link"><i class="bi bi-file-earmark-pdf-fill"></i> Constancias PDF</a>
+                <!-- <a href="#" class="btn btn-outline-danger" id="link"><i class="bi bi-file-earmark-pdf-fill"></i> Constancias PDF</a> -->
             </div>
         </div>
 
-    <table class="table table-hover table-sm">
-        <thead class="table-dark text-center">
+    <table class="table table-hover table-striped table-sm">
+        <thead class="table text-center" style="color:#486989">
             <tr>
             <th scope="col">#</th>
-            <th scope="col">Apellido</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Tipo sangre</th>
-            <th scope="col">Semestre</th>
-            <th scope="col">Grupo</th>
-            <th scope="col">Unidad académica</th>
-            <th scope="col">Matrícula</th>
-            <th scope="col">Programa</th>
-            <th scope="col">Fecha/Hora</th>
-            <th scope="col">Constancia (PDF)</th>
+            <!-- <th scope="col">Apellido</th> -->
+            <th scope="col">Nombre completo</th>
+            <th scope="col">Teléfono (WA)</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">No. Mesa</th>
+            <th scope="col"><small>QR</small></th>
+            <th scope="col"><small><i class="bi bi-envelope text-primary"></i> Email</small></th>
+            <th scope="col"><small><i class="bi bi-whatsapp text-success"></i> WhatsApp</small></th>
             </tr>
         </thead>
         <tbody id="myTable">
@@ -164,8 +165,8 @@
 </main>
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <p class="col-md-12 mb-0 text-muted"><a href="/" class="col-md-4 d-flex mb-md-0 me-md-auto link-dark text-decoration-none">
-                <img src="../assets/brand/img/logo.png" width="140" height="45" role="img" alt="" class="p-2 rounded" style="background-color:#000e42">
+      <p class="col-md-12 mb-0 text-muted"><a href="/" class="col-md-4 d-flex mb-md-0 me-md-auto link-dark text-decoration-none text-center">
+      <img src="../assets/brand/img/SmartEventLogoLight.png" width="auto" height="80" role="img" alt="" class="p-2 rounded" style="background-color:#b0b8b4;">
             </a></p>
       
     </footer>

@@ -5,12 +5,16 @@ $nombre = $_POST['nombre'];
 $telefono = $_POST['telefono'];
 $email = $_POST['email'];
 $mesa = $_POST['mesa'];
+$internacional = $_POST['internacional'];
+$tipo = $_POST['tipo'];
+
+$telefono = $internacional.''.$telefono;
 
 function generarCodigo($longitud) {
     $key = '';
     $pattern = '1234567890abcdefghijklmnopqrstuvwxyz';
     $max = strlen($pattern)-1;
-    for($i=0;$i < $longitud;$i++) $key .= $pattern{mt_rand(0,$max)};
+    for($i=0; $i < $longitud; $i++) $key .= $pattern{mt_rand(0,$max)};
     return $key;
     }
     //genera un código de 9 caracteres de longitud.
@@ -24,12 +28,14 @@ $queryAsistentes = "INSERT INTO asistentes(
     telefono,
     email,
     no_mesa,
+    tipo_invitado
     idQr
     ) VALUES(
         '$nombre',
         '$telefono',
         '$email',
         '$mesa',
+        '$tipo',
         '$idQr')";
 
 $resultadoAsistentes = $conn->query($queryAsistentes);
