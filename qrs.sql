@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 16-06-2023 a las 00:30:10
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 7.4.28
+-- Host: 127.0.0.1
+-- Generation Time: Jun 17, 2023 at 05:28 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,42 +18,29 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `qrs`
+-- Database: `qrs`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `asistentes`
+-- Table structure for table `asistentes`
 --
 
 CREATE TABLE `asistentes` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `telefono` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `no_mesa` int(11) NOT NULL,
+  `telefono` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `no_mesa` int(11) DEFAULT NULL,
+  `tipo_invitado` int(11) DEFAULT NULL,
   `idQr` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `asistentes`
---
-
-INSERT INTO `asistentes` (`id`, `nombre`, `telefono`, `email`, `no_mesa`, `idQr`) VALUES
-(97, 'MARCO ANTONIO', '', '', 0, 'CAAM791207HCSNNR07_42205574'),
-(98, 'CELBA', '', '', 0, 'CACC561125MZSSHL08_39200547'),
-(99, 'JORGE CARLOS', '', '', 0, 'BEWJ740122HDFRDR09_42205713'),
-(100, 'SALVADOR', '', '', 0, 'HOSS721204HZSYTL06_21205404'),
-(101, 'JUAN', '', '', 0, 'EIGJ850106HVZSRN07_42205714'),
-(102, 'NORBERTO', '', '', 0, 'EAGN650606HTSSTR09_42207726'),
-(103, 'MONICA ISELA', '', '', 0, 'GACM680902MDFLSN08_42205965'),
-(104, 'JESUS FIDEL', '', '', 0, 'HERJ661015HDFRDS08_42205966');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `eventos`
+-- Table structure for table `eventos`
 --
 
 CREATE TABLE `eventos` (
@@ -66,7 +53,7 @@ CREATE TABLE `eventos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `eventos`
+-- Dumping data for table `eventos`
 --
 
 INSERT INTO `eventos` (`id`, `nombre`, `capacidad`, `fecha`, `lugar`, `activo`) VALUES
@@ -94,12 +81,13 @@ INSERT INTO `eventos` (`id`, `nombre`, `capacidad`, `fecha`, `lugar`, `activo`) 
 (22, 'Simpsium', 30, '2023-01-01', 'ANFECA', 1),
 (23, 'Evento prueba 1', 60, '2023-02-15', 'Auditorio FCA', 1),
 (24, 'Simposium', 90, '2023-02-16', 'Fernando Calderón', 1),
-(25, 'Evento 1', 100, '2023-05-15', 'ANFECA', 1);
+(25, 'Evento 1', 100, '2023-05-15', 'ANFECA', 1),
+(26, 'Boda P&R', 350, '2023-06-17', 'Casa Santa', 1);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pagos`
+-- Table structure for table `pagos`
 --
 
 CREATE TABLE `pagos` (
@@ -112,7 +100,7 @@ CREATE TABLE `pagos` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `programa`
+-- Table structure for table `programa`
 --
 
 CREATE TABLE `programa` (
@@ -121,7 +109,7 @@ CREATE TABLE `programa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `programa`
+-- Dumping data for table `programa`
 --
 
 INSERT INTO `programa` (`id`, `programa`) VALUES
@@ -135,7 +123,7 @@ INSERT INTO `programa` (`id`, `programa`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `registro`
+-- Table structure for table `registro`
 --
 
 CREATE TABLE `registro` (
@@ -148,7 +136,7 @@ CREATE TABLE `registro` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `registro`
+-- Dumping data for table `registro`
 --
 
 INSERT INTO `registro` (`id`, `asistente`, `evento`, `asistencia`, `fecha_registro`, `idQr`) VALUES
@@ -167,7 +155,7 @@ INSERT INTO `registro` (`id`, `asistente`, `evento`, `asistencia`, `fecha_regist
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `registro_sitios`
+-- Table structure for table `registro_sitios`
 --
 
 CREATE TABLE `registro_sitios` (
@@ -181,7 +169,7 @@ CREATE TABLE `registro_sitios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `registro_sitios`
+-- Dumping data for table `registro_sitios`
 --
 
 INSERT INTO `registro_sitios` (`id`, `asistente`, `sitio`, `asistencia`, `fecha_registro`, `fecha_salida`, `idQr`) VALUES
@@ -200,7 +188,7 @@ INSERT INTO `registro_sitios` (`id`, `asistente`, `sitio`, `asistencia`, `fecha_
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `sangre`
+-- Table structure for table `sangre`
 --
 
 CREATE TABLE `sangre` (
@@ -209,7 +197,7 @@ CREATE TABLE `sangre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `sangre`
+-- Dumping data for table `sangre`
 --
 
 INSERT INTO `sangre` (`id`, `tipo_sangre`) VALUES
@@ -225,7 +213,7 @@ INSERT INTO `sangre` (`id`, `tipo_sangre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `semestre`
+-- Table structure for table `semestre`
 --
 
 CREATE TABLE `semestre` (
@@ -234,7 +222,7 @@ CREATE TABLE `semestre` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `semestre`
+-- Dumping data for table `semestre`
 --
 
 INSERT INTO `semestre` (`id`, `semestre`) VALUES
@@ -251,7 +239,7 @@ INSERT INTO `semestre` (`id`, `semestre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `sitio`
+-- Table structure for table `sitio`
 --
 
 CREATE TABLE `sitio` (
@@ -262,7 +250,7 @@ CREATE TABLE `sitio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `sitio`
+-- Dumping data for table `sitio`
 --
 
 INSERT INTO `sitio` (`id`, `sitio`, `tipo_sitio`, `activo`) VALUES
@@ -278,7 +266,7 @@ INSERT INTO `sitio` (`id`, `sitio`, `tipo_sitio`, `activo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `unidad_academica`
+-- Table structure for table `unidad_academica`
 --
 
 CREATE TABLE `unidad_academica` (
@@ -287,7 +275,7 @@ CREATE TABLE `unidad_academica` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `unidad_academica`
+-- Dumping data for table `unidad_academica`
 --
 
 INSERT INTO `unidad_academica` (`id`, `unidad_academica`) VALUES
@@ -296,7 +284,7 @@ INSERT INTO `unidad_academica` (`id`, `unidad_academica`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usr`
+-- Table structure for table `usr`
 --
 
 CREATE TABLE `usr` (
@@ -307,148 +295,148 @@ CREATE TABLE `usr` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `usr`
+-- Dumping data for table `usr`
 --
 
 INSERT INTO `usr` (`id`, `usr`, `pwd`, `perfil`) VALUES
 (1, 'admin', 123456789, 1);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `asistentes`
+-- Indexes for table `asistentes`
 --
 ALTER TABLE `asistentes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `eventos`
+-- Indexes for table `eventos`
 --
 ALTER TABLE `eventos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `pagos`
+-- Indexes for table `pagos`
 --
 ALTER TABLE `pagos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `programa`
+-- Indexes for table `programa`
 --
 ALTER TABLE `programa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `registro`
+-- Indexes for table `registro`
 --
 ALTER TABLE `registro`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `registro_sitios`
+-- Indexes for table `registro_sitios`
 --
 ALTER TABLE `registro_sitios`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `sangre`
+-- Indexes for table `sangre`
 --
 ALTER TABLE `sangre`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `semestre`
+-- Indexes for table `semestre`
 --
 ALTER TABLE `semestre`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `sitio`
+-- Indexes for table `sitio`
 --
 ALTER TABLE `sitio`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `unidad_academica`
+-- Indexes for table `unidad_academica`
 --
 ALTER TABLE `unidad_academica`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `usr`
+-- Indexes for table `usr`
 --
 ALTER TABLE `usr`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `asistentes`
+-- AUTO_INCREMENT for table `asistentes`
 --
 ALTER TABLE `asistentes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
--- AUTO_INCREMENT de la tabla `eventos`
+-- AUTO_INCREMENT for table `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT de la tabla `pagos`
+-- AUTO_INCREMENT for table `pagos`
 --
 ALTER TABLE `pagos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `programa`
+-- AUTO_INCREMENT for table `programa`
 --
 ALTER TABLE `programa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT de la tabla `registro`
+-- AUTO_INCREMENT for table `registro`
 --
 ALTER TABLE `registro`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT de la tabla `registro_sitios`
+-- AUTO_INCREMENT for table `registro_sitios`
 --
 ALTER TABLE `registro_sitios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
--- AUTO_INCREMENT de la tabla `sangre`
+-- AUTO_INCREMENT for table `sangre`
 --
 ALTER TABLE `sangre`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT de la tabla `semestre`
+-- AUTO_INCREMENT for table `semestre`
 --
 ALTER TABLE `semestre`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT de la tabla `sitio`
+-- AUTO_INCREMENT for table `sitio`
 --
 ALTER TABLE `sitio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT de la tabla `unidad_academica`
+-- AUTO_INCREMENT for table `unidad_academica`
 --
 ALTER TABLE `unidad_academica`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `usr`
+-- AUTO_INCREMENT for table `usr`
 --
 ALTER TABLE `usr`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

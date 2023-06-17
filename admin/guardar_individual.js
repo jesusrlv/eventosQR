@@ -8,8 +8,9 @@ $(document).ready(function() {
     var email = document.getElementById("emailAlta").value;
     var mesa = document.getElementById("mesaAlta").value;
     var internacional = document.getElementById("internacional").value;
+    var tipo = document.getElementById("tipoInvitado").value;
 
-    if (nombre == "" || telefono == "" || email == "" || mesa==""){
+    if (nombre == "" || telefono == "" || email == "" || mesa=="" || tipo ==""){
         alert("Se deben llenar todos los campos");
         return;
     }
@@ -24,6 +25,7 @@ $(document).ready(function() {
             email:email,
             mesa:mesa,
             internacional:internacional,
+            tipo:tipo
         },
         dataType: "json",
         success: function(data) {

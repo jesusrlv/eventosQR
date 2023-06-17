@@ -165,13 +165,13 @@
     </div>
     <div class="col-6">
       <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1"><i class="bi bi-globe-americas"></i></span>
         <select class="form-select" id="internacional" aria-label="Default select example">
-          <option selected>Sel...</option>
           <option value="52">Mex</option>
           <option value="">Otro</option>
         </select>
         <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone-fill"></i></span>
-        <input type="text" class="form-control" style="width: 75%;" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="telefonoAlta" required >
+        <input type="text" class="form-control" style="width: 50%;" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="telefonoAlta" required >
       </div>
     </div>
     <div class="col-6">
@@ -180,10 +180,20 @@
           <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" name="email" id="emailAlta" required>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-3">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-map"></i></span>
           <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" name="Mesa" id="mesaAlta" required>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-lines-fill"></i></span>
+          <select class="form-select" id="tipoInvitado" aria-label="Default select example">
+          <option selected>Tipo de invitado...</option>
+          <option value="1">Principal</option>
+          <option value="2">Acompañante</option>
+        </select>
       </div>
     </div>
           <hr>

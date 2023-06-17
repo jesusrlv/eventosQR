@@ -128,11 +128,11 @@
 
   <div class="container-fluid w-100 h-100" style="width:100%">
     <div class="row mb-0 border-bottom">
-      <div class="col-4 border-end p-5 align-self-center" style="background-color:#f8f9fa;">
+      <div class="col-4 border-end p-3 align-self-center" style="background-color:#f8f9fa;">
         <div class="container p-5 border rounded bg-white shadow-sm" style="font-family: 'Poppins', sans-serif;">
 
-          <p style="font-size:300px" class="text-center border-bottom mb-3">
-            <img src="../assets/brand/img/SmartEventLogo.png" alt="" width="300px" id="logo_lateral">
+          <p style="font-size:90px" class="text-center border-bottom mb-3">
+            <img src="../assets/brand/img/Novios.png" alt="" width="170px" id="logo_lateral">
           </p>
 
           <div id="checkDiv" class="mt-3">
@@ -141,10 +141,10 @@
               Nombre 
             </p>
             <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
-              <strong class="d-block text-gray-dark">Apellidos:</strong>
-              Apellidos
+              <strong class="d-block text-gray-dark"># de Mesa:</strong>
+              No. de Mesa asignada
             </p>
-            <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
+            <!-- <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
               <strong class="d-block text-gray-dark">Especialidad:</strong>
               Especialidad
             </p>
@@ -155,19 +155,19 @@
             <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
               <strong class="d-block text-gray-dark">Carrera:</strong>
               Carrera
-            </p>
+            </p> -->
           </div>
 
         </div>
       </div>
-      <div class="col-8 border-start align-self-center text-center justify-content-center">
-        <p><button class="btn btn-primary" onclick="abrirCamara()"><i class="bi bi-qr-code"></i> Leer QR</button> <button class="btn btn-danger"  id="botonCerrar"><i class="bi bi-qr-code"></i> Cerrar QR</button></p>
+      <div class="col-7 border-start align-self-center justify-content-center">
+        <p><button class="btn btn-primary ms-2" onclick="abrirCamara()"><i class="bi bi-qr-code"></i> Leer QR</button> <button class="btn btn-danger"  id="botonCerrar"><i class="bi bi-qr-code"></i> Cerrar QR</button></p>
         <div class="card w-75 text-center" style="height:500px">
           <div class="card-header text-light" style="background-color:#8a608a;">
           <i class="bi bi-camera-fill"></i> Cámara de registro de asistentes
           </div>
             <div class="card-body text-center">
-                            <img src="../assets/brand/img/somos_fca_halcon_azul_15.png" style="max-width: 800px;"  alt="" id="imagenFCA">
+              <img src="../assets/brand/img/SmartEventAlpha.png" style="max-width: 400px;"  alt="" id="imagenFCA">
               <video id="preview" class="w-100 h-100" style="max-height:810px" hidden></video>  
           </div>
           <p hidden><input type="text" id="textQR" onchange="checkIn()"></p>
@@ -184,7 +184,7 @@
         <p class="col-md-4 mb-0 text-muted">&copy; 2022 UACYA | UAZ</p>
 
         <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <img src="../assets/brand/img/logo.png" width="140" height="45" role="img" alt="" class="p-2 rounded" style="background-color:#000e42">
+        <img src="../assets/brand/img/SmartEventLogoLight.png" width="auto" height="80" role="img" alt="" class="p-2 rounded" style="background-color:#b0b8b4;">
         </a>
 
         <ul class="nav col-md-4 justify-content-end">

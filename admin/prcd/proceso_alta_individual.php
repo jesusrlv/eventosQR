@@ -6,6 +6,7 @@ $telefono = $_POST['telefono'];
 $email = $_POST['email'];
 $mesa = $_POST['mesa'];
 $internacional = $_POST['internacional'];
+$tipo = $_POST['tipo'];
 
 $telefono = $internacional.''.$telefono;
 
@@ -27,12 +28,14 @@ $queryAsistentes = "INSERT INTO asistentes(
     telefono,
     email,
     no_mesa,
+    tipo_invitado
     idQr
     ) VALUES(
         '$nombre',
         '$telefono',
         '$email',
         '$mesa',
+        '$tipo',
         '$idQr')";
 
 $resultadoAsistentes = $conn->query($queryAsistentes);
