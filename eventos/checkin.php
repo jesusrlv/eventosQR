@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
     <title>Check-in</title>
-    <link rel="icon" type="image/png" href="../assets/brand/img/ico.ico"/>
+    <link rel="icon" type="image/png" href="../assets/brand/img/SmartEventICOLight.ico"/>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
 
@@ -99,11 +99,11 @@
   </head>
   <body onunload="cerrarPagina()">
 <main class="mb-0">
-  <header class="p-3" style="background-color:#000e42;">
+  <header class="p-3" style="background-color:#8a608a;">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img src="../assets/brand/img/logo.png" width="120" height="36" role="img" alt="">        
+        <img src="../assets/brand/img/SmartEventLogoLight.png" width="auto" height="70" role="img" alt="">        
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 ms-4 justify-content-center mb-md-0">
@@ -116,7 +116,7 @@
 
         <div class="text-end">
           <!-- <button type="button" class="btn btn-outline-light me-2">Login</button> -->
-          <a href="prcd/sort.php" type="button" class="btn btn-warning">Salir</a>
+          <a href="prcd/sort.php" type="button" class="btn btn-light">Salir</a>
         </div>
       </div>
     </div>
@@ -130,12 +130,12 @@
     <div class="row mb-0 border-bottom">
       <div class="col-4 border-end p-5 align-self-center" style="background-color:#f8f9fa;">
         <div class="container p-5 border rounded bg-white shadow-sm" style="font-family: 'Poppins', sans-serif;">
-          <!-- <p style="font-size:300px" class="text-center border-bottom"><i class="bi bi-person-circle"></i></p> -->
-          <p style="font-size:300px" class="text-center border-bottom">
-            <img src="../assets/brand/img/somos_fca_halcon_azul_15.png" alt="" width="300px" id="logo_lateral">
+
+          <p style="font-size:300px" class="text-center border-bottom mb-3">
+            <img src="../assets/brand/img/SmartEventLogo.png" alt="" width="300px" id="logo_lateral">
           </p>
 
-          <div id="checkDiv">
+          <div id="checkDiv" class="mt-3">
             <p class="pb-3 mb-0 small lh-sm border-bottom">
               <strong class="d-block text-gray-dark">Nombre:</strong>
               Nombre 
@@ -159,19 +159,15 @@
           </div>
 
         </div>
-        <div class="container p-5" style="font-family: 'Poppins', sans-serif;">
-          
-        </div>
       </div>
-      
-      <div class="col-8 border-start align-self-center justify-content-center">
-        <p class="mt-5"><button class="btn btn-primary" onclick="abrirCamara()"><i class="bi bi-qr-code"></i> Leer QR</button> <button class="btn btn-danger"  id="botonCerrar"><i class="bi bi-qr-code"></i> Cerrar QR</button></p>
-        <div class="card w-100" style="height:900px">
-          <div class="card-header bg-primary text-light">
+      <div class="col-8 border-start align-self-center text-center justify-content-center">
+        <p><button class="btn btn-primary" onclick="abrirCamara()"><i class="bi bi-qr-code"></i> Leer QR</button> <button class="btn btn-danger"  id="botonCerrar"><i class="bi bi-qr-code"></i> Cerrar QR</button></p>
+        <div class="card w-75 text-center" style="height:500px">
+          <div class="card-header text-light" style="background-color:#8a608a;">
           <i class="bi bi-camera-fill"></i> Cámara de registro de asistentes
           </div>
             <div class="card-body text-center">
-              <img src="../assets/brand/img/somos_fca_halcon_azul_15.png" style="max-width: 800px;"  alt="" id="imagenFCA">
+                            <img src="../assets/brand/img/somos_fca_halcon_azul_15.png" style="max-width: 800px;"  alt="" id="imagenFCA">
               <video id="preview" class="w-100 h-100" style="max-height:810px" hidden></video>  
           </div>
           <p hidden><input type="text" id="textQR" onchange="checkIn()"></p>

@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
     <title>Lista de asistentes</title>
-    <link rel="icon" type="image/png" href="../assets/brand/img/ico.ico"/>
+    <link rel="icon" type="image/png" href="../assets/brand/img/SmartEventICOLight.ico"/>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
 
