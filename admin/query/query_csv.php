@@ -77,12 +77,13 @@
                 $email = $getData[3];
                 $mesa = $getData[4];
                 $tipo = $getData[5];
+                $pax = $getData[6];
 
                 $telefono = $pais.''.$telefono;
 
                 $idQr = $codigo;
                                 
-                    mysqli_query($conn, "INSERT INTO asistentes (nombre, telefono, email, no_mesa, tipo_invitado, idQr) VALUES ('" . $nombre . "', '" . $telefono . "', '" . $email . "', '" . $mesa . "','".$tipo."', '" . $idQr . "')");
+                    mysqli_query($conn, "INSERT INTO asistentes (nombre, telefono, email, no_mesa, tipo_invitado, pax_mesa, idQr) VALUES ('" . $nombre . "', '" . $telefono . "', '" . $email . "', '" . $mesa . "','".$tipo."',,'".$pax."', '" . $idQr . "')");
             }
 
             // Close opened CSV file
