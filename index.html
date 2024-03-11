@@ -127,15 +127,33 @@
   </body>
 
   <div class="modal fade" id="addNew" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Crear cuenta</h1>
+          <h5 class="modal-title w-100 fs-5 mt-3 mb-3" style="color: rgba(90, 46, 116, 0.9); font-family: 'Poppins', sans-serif;" id="staticBackdropLabel">Ingresa los siguientes datos para crear tu cuenta</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="row">
-            <h5 class="text-start mb-3" style="color: rgba(90,46,116,0.9); font-family: 'Poppins', sans-serif;">Datos generales:</h5>
+            <div class="col-md-6">
+              <div class="input mb-3">
+                <div class="col">
+                  <label for="inputPassword6" class="col-form-label">Contraseña</label>
+                </div>
+                <div class="col">
+                  <input type="password" id="inputPassword" class="form-control mb-1" aria-describedby="passwordHelpInline">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 ">
+                <label for="inputPassword5" class="form-label">Password</label>
+                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                <div id="passwordHelpBlock" class="form-text">
+                  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                </div>
+            </div>
+            <br>
+            <h5 class="text-start mb-3 mt-3" style="color: rgba(90,46,116,0.9); font-family: 'Poppins', sans-serif;">Datos generales:</h5>
             <div class="col-md-4">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
@@ -154,37 +172,76 @@
                 <input type="text" class="form-control" placeholder="Nombre(s)" aria-label="Username" aria-describedby="basic-addon1" id="aMaterno" name="nombre" required>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-phone"></i></span>
                 <input type="text" class="form-control" placeholder="Teléfono 1" aria-label="Teléfono" aria-describedby="basic-addon1" id="tel1" name="tel1" required>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-phone"></i></span>
                 <input type="text" class="form-control" placeholder="Teléfono 2" aria-label="Teléfono" aria-describedby="basic-addon1" id="tel2" name="tel2">
               </div>
             </div>
-            <div class="col-md-8 mb-3">
+            <div class="col-md-6 mb-3">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
                 <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" id="emailE" name="emailE" required>
               </div>
             </div>
-            <hr>
+            
             <h5 class="text-start mb-3" style="color: rgba(90,46,116,0.9); font-family: 'Poppins', sans-serif;">Domicilio:</h5>
-            <div class="col-md-4 ">
+            <div class="col-md-6">
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-diagram-2"></i></span>
-                <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" id="mesaE" name="mesaE" required>
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-house-door"></i></span>
+                <input type="text" class="form-control w-50" placeholder="Calle" aria-label="Mesa" aria-describedby="basic-addon1" id="calleR" name="calleR" required>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-123"></i></span>
+                <input type="text" class="form-control" placeholder="# Ext." aria-label="# Ext." aria-describedby="basic-addon1" id="numeroR" name="numeroR" required>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-123"></i></span>
+                <input type="text" class="form-control" placeholder="# Int." aria-label="# Int." aria-describedby="basic-addon1" id="numeroRI" name="numeroRI" required>
+              </div>
+            </div>
+            <div class="col-md-5 ">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-geo-alt"></i></span>
+                <input type="text" class="form-control" placeholder="Ciudad" aria-label="ciudad" aria-describedby="basic-addon1" id="ciudad" name="ciudad" required>
+              </div>  
+            </div>
+            <div class="col-md-4">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-map"></i></span>
+                <input type="text" class="form-control" placeholder="Estado" aria-label="estado" aria-describedby="basic-addon1" id="estado" name="estado" required>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">C.P.</span>
+                <input type="text" class="form-control" placeholder="Código Postal" aria-label="cp" aria-describedby="basic-addon1" id="cp" name="cp" required>
+              </div>
+            </div>
+            <div class="col-md-12 ">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-globe-americas"></i></span>
+                <input type="text" class="form-control" placeholder="País" aria-label="pais" aria-describedby="basic-addon1" id="pais" name="pais" required>
               </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <div class="d-grid gap-2 col-12 mx-auto">
+            <button class="w-100 btn btn-lg text-white" style="background-color: rgba(90, 46, 116, 0.9); font-family: 'Poppins', sans-serif;" type="button">Crear cuenta</button>
+            <button class="w-100 btn btn-lg btn-outline-light" style="color: rgba(90, 46, 116, 0.9); font-family: 'Poppins', sans-serif;" type="button" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+
         </div>
       </div>
     </div>
