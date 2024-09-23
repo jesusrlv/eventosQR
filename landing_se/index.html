@@ -1,32 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Smart Event</title>
+        <title>Smart-Event | Inicio</title>
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
-
-        <link rel="stylesheet" href="css/magnific-popup.css">
-
-        <link href="css/aos.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link href="css/aos.css" rel="stylesheet">
         <link href="css/templatemo-nomad-force.css" rel="stylesheet">
+        <!-- <link href="css/pricing.css" rel="stylesheet"> -->
 <!--
 
 TemplateMo 567 Nomad Force
@@ -35,27 +30,96 @@ https://templatemo.com/tm-567-nomad-force
 
 -->
     </head>
-    
+    <style>
+        /* Escritorio grande */
+    @media (min-width: 1200px) {
+        #logoBig {
+            width: auto;
+            height: 50%;
+        }
+
+        #logowide {
+            width: 40%;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+        #menucollapse{
+            display: none;
+        }
+    }
+
+    /* Escritorio pequeño y laptops */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        #logoBig {
+            width: auto;
+            height: 50%;
+        }
+
+        #logowide {
+            width: auto;
+            height: 10%;
+        }
+    }
+
+    /* Tablets */
+    @media (min-width: 768px) and (max-width: 991px) {
+        #logoBig {
+            width: auto;
+            height: 50%;
+        }
+
+        #logowide {
+            width: auto;
+            height: 50%;
+        }
+    }
+
+    /* Móviles grandes (smartphones) */
+    @media (min-width: 576px) and (max-width: 767px) {
+        #logoBig {
+            width: auto;
+            height: 50%;
+        }
+
+        #logowide {
+            width: auto;
+            height: 50%;
+        }
+    }
+
+    /* Móviles pequeños */
+    @media (max-width: 575px) {
+        #logoBig {
+            width: auto;
+            height: 50%;
+        }
+
+        #logowide {
+            width: auto;
+            height: 50%;
+        }
+    }
+    </style>
     <body>
     
         <main>
 
             <section class="hero" id="hero">
                 <div class="heroText">
-                    <img class="mt-2" src="../assets/brand/img/SmartEventLogoGlow.png" data-aos="zoom-in" data-aos-delay="500" alt="" width="auto" height="290" >
-                    <!-- <h3 class="text-white mt-2 mb-lg-4" data-aos="zoom-in" data-aos-delay="500">
-                        Smart-Events
-                    </h3> -->
+                    <img src="../assets/brand/img/SmartEventLogoTxt.png" data-aos="zoom-in" data-aos-delay="500" alt="" id="logoBig">
+                    <!-- <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
+                        Nomad Force
+                    </h1> -->
 
-                    <p class="text-secondary-white-color mt-2" data-aos="fade-up" data-aos-delay="700" style="font-family: 'Poppins', sans-serif;">
+                    <p class="text-secondary-white-color mt-1" data-aos="fade-up" data-aos-delay="1000">
                         los mejores eventos sin <strong >contratiempos</strong>
                     </p>
                 </div>
 
                 <div class="videoWrapper">
-                    <video autoplay="" loop="" muted="" class="custom-video" poster="videos/792bd98f3e617786c850493560e11c45.jpg">
-                        <source src="videos/check-incodigoqr.mp4" type="video/mp4">
-
+                    <video autoplay="" loop="" muted="" class="custom-video" poster="videos/portada.jpg">
+                        <source src="videos/4783618_Wedding_Reception_1920x1080.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -65,12 +129,11 @@ https://templatemo.com/tm-567-nomad-force
 
             <nav class="navbar navbar-expand-lg bg-light shadow-lg">
                 <div class="container">
-
-                    <a class="navbar-brand" href="index.html" style="color: #dd1b73; font-family: 'Poppins', sans-serif;">
-                        <img src="../assets/brand/img/SmartEventWide.png" alt="" width="auto" height="70">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="../assets/brand/img/SmartEventWide.png" alt="" id="logowide">
                     </a>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="menucollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
@@ -85,11 +148,11 @@ https://templatemo.com/tm-567-nomad-force
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#portfolio">Eventos</a>
+                                <a class="nav-link" href="#portfolio">Clientes</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#news">Planes</a>
+                                <a class="nav-link" href="#news">Planes & Paquetes</a>
                             </li>
 
                             <li class="nav-item">
@@ -103,16 +166,22 @@ https://templatemo.com/tm-567-nomad-force
             <section class="section-padding pb-0" id="about">
                 <div class="container mb-5 pb-lg-5">
                     <div class="row">
+                        <!-- <div class="text-center">
+                            <img src="../assets/brand/img/decobar.jpg" class="img-fluid"  alt="" height="5" width="auto" data-aos="fade-up">
+                        </div> -->
                         <div class="col-12">
                             <h2 class="mb-3" data-aos="fade-up">Déjanos crear...</h2>
                         </div>
 
                         <div class="col-lg-6 col-12 mt-3 mb-lg-5">
-                            <p class="me-4" data-aos="fade-up" data-aos-delay="300">La mejor experiencia para ti y tus invitados <a rel="nofollow" href="http://paypal.me/templatemo" target="_blank">con un evento inteligente</a> de principio a<a rel="nofollow" href="https://templatemo.com/tm-567-nomad-force" target="_parent"> fin. Asegurando que cada momento sea especial y libre de estrés. El equipo de soporte está disponible 24/7 para resolver cualquier duda y asegurarse de que todo salga perfecto.</p>
+                            <p class="me-4" data-aos="fade-up" data-aos-delay="300"><strong>La mejor experiencia para ti y tus invitados</strong> con un evento inteligente de principio a fin. Puedes estar seguro de que cada momento seará especial y libre de estrés.<br><br> Nuestro equipo de soporte está disponible <strong>24/7</strong> para resolver cualquier duda y asegurarse de que todo salga perfecto.<br><br><a rel="nofollow" href="#" style="font-weight: bold;">Smart-Event</a> está diseñado para ofrecerte una experiencia fluida y segura, desde la generación de invitaciones hasta el ingreso al evento.</p>
                         </div>
 
                         <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
-                            <p data-aos="fade-up" data-aos-delay="500">Nuestro sistema está diseñado para ofrecerte una experiencia fluida y segura, desde la generación de invitaciones hasta el ingreso al evento. Con tecnología de vanguardia, garantizamos que cada asistente disfrute de un proceso rápido y sin complicaciones. Ofrecemos herramientas avanzadas para el control de acceso, monitoreo en tiempo real y análisis detallados post-evento. Ya sea un concierto, conferencia, festival, boda, XV años o cualquier tipo de evento, nuestro sistema se adapta a tus necesidades específicas.</p>
+                            <p data-aos="fade-up" data-aos-delay="500">Con tecnología de vanguardia, garantizamos que cada asistente disfrute de un proceso de ingreso y acomodo <strong>rápido y sin complicaciones.</strong><br><br>Ofrecemos herramientas avanzadas para el control de acceso, monitoreo en tiempo real y análisis detallados post-evento. Ya sea un concierto, conferencia, festival, boda, XV años o cualquiera que sea tu evento, nuestro sistema <strong>se adapta completamente a tus necesidades</strong>.</p>
+                            <div class="text-end">
+                                <img src="../assets/brand/img/SmartEventAlpha.png" alt="" width="auto" height="100" data-aos="fade-up" data-aos-delay="500">
+                            </div>
                         </div>
 
                     </div>
@@ -126,15 +195,15 @@ https://templatemo.com/tm-567-nomad-force
 
                         <div class="col-lg-3 col-12 bg-dark">  
                             <div class="d-flex flex-column flex-wrap justify-content-center h-100 py-5 px-4 pt-lg-4 pb-lg-0">
-                                <h3 class="text-white mb-3" data-aos="fade-up">We’re - idealists and strategic thinkers.</h3>
+                                <h3 class="text-white mb-3" data-aos="fade-up">Somos - detallistas y estratégicos.</h3>
 
-                                <p class="text-secondary-white-color" data-aos="fade-up">Over six years in the video business</p>
+                                <p class="text-secondary-white-color" data-aos="fade-up">Tenemos más de dos años en el negocio de control y gestión de accesos.</p>
 
                                 <div class="mt-3 custom-links">
+                                    <a href="#portfolio" class="text-white custom-link" style="font-size: larger;" data-aos="zoom-in" data-aos-delay="100">Trabaja con nosotros!</a>
                                     
-                                    <a href="#news" class="text-white custom-link" data-aos="zoom-in" data-aos-delay="100">Read News & Events</a>
+                                    <a href="#news" class="text-white custom-link" data-aos="zoom-in" data-aos-delay="300">Ver Planes & Paquetes</a>
 
-                                    <a href="#contact" class="text-white custom-link" data-aos="zoom-in" data-aos-delay="300">Work with Us</a>
                                 </div>
 
                             </div>
@@ -195,15 +264,15 @@ https://templatemo.com/tm-567-nomad-force
                                 </div>
 
                                 <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
-                                      <span class="visually-hidden">Previous</span>
+                                    <span class="visually-hidden">Anterior</span>
                                 </button>
 
                                 <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 
-                                      <span class="visually-hidden">Next</span>
+                                    <span class="visually-hidden">Siguiente</span>
                                 </button>
                             </section>
 
@@ -217,57 +286,57 @@ https://templatemo.com/tm-567-nomad-force
                     <div class="row">
 
                         <div class="col-12">
-                            <h2 class="mb-5 text-center" data-aos="fade-up">Portfolio</h2>
+                            <h2 class="mb-5 text-center" data-aos="fade-up">Nuestros Clientes</h2>
                         </div>
 
                         <div class="col-lg-6 col-12">
                             <div class="portfolio-thumb mb-5" data-aos="fade-up">
-                                <a href="images/portfolio/visuals-Y4qzW3AsvqI-unsplash.jpeg" class="image-popup">
-                                    <img src="images/portfolio/visuals-Y4qzW3AsvqI-unsplash.jpeg" class="img-fluid portfolio-image" alt="">
+                                <a href="images/portfolio/Screenshot 2024-09-20 at 14-29-17 C&M (@candmco2018) • Instagram photos and videos.png" class="image-popup">
+                                    <img src="images/portfolio/Screenshot 2024-09-20 at 14-29-17 C&M (@candmco2018) • Instagram photos and videos.png" class="img-fluid portfolio-image" alt="">
                                 </a>
 
                                 <div class="portfolio-info">                     
-                                    <h4 class="portfolio-title mb-0">Effortless</h4>
+                                    <h4 class="portfolio-title mb-0"><a href="https://www.instagram.com/candmco2018/" target="_blank">CANDMCO</a></h4>
 
-                                    <p class="text-danger">Branding</p>
+                                    <p class="text-danger">Party Boutique and more</p>
                                 </div>
                             </div> 
 
                             <div class="portfolio-thumb" data-aos="fade-up">
-                                <a href="images/portfolio/severin-candrian-nn3uIZqmUtE-unsplash.jpeg" class="image-popup">
-                                    <img src="images/portfolio/severin-candrian-nn3uIZqmUtE-unsplash.jpeg" class="img-fluid portfolio-image" alt="">
+                                <a href="images/portfolio/somos_fca_halcon_azul_15.png" class="image-popup">
+                                    <img src="images/portfolio/somos_fca_halcon_azul_15.png" class="img-fluid portfolio-image" alt="">
                                 </a>
 
                                 <div class="portfolio-info">                     
-                                    <h4 class="portfolio-title mb-0">Health technology</h4>
+                                    <h4 class="portfolio-title mb-0">UAZ | FCA</h4>
 
-                                    <p class="text-success">Art Direction</p>
+                                    <p class="text-success">Universidades</p>
                                 </div>
                             </div> 
                         </div>
 
                         <div class="col-lg-6 col-12">
                             <div class="portfolio-thumb mt-5 mt-lg-0 mb-5" data-aos="fade-up">
-                                <a href="images/portfolio/tyler-nix-Y1drF0Y3Oe0-unsplash.jpeg" class="image-popup">
-                                    <img src="images/portfolio/tyler-nix-Y1drF0Y3Oe0-unsplash.jpeg" class="img-fluid portfolio-image" alt="">
+                                <a href="images/portfolio/juventud.jpg" class="image-popup">
+                                    <img src="images/portfolio/juventud.jpg" class="img-fluid portfolio-image" alt="">
                                 </a>
 
                                 <div class="portfolio-info">                     
-                                    <h4 class="portfolio-title mb-0">Maki</h4>
+                                    <h4 class="portfolio-title mb-0">Instituto de la Juventud</h4>
 
-                                    <p class="text-warning">Website</p>
+                                    <p class="text-warning">Gobierno</p>
                                 </div>
                             </div> 
 
                             <div class="portfolio-thumb" data-aos="fade-up">
-                                <a href="images/portfolio/thought-catalog-gv-T-OjLe4c-unsplash.jpeg" class="image-popup">
-                                    <img src="images/portfolio/thought-catalog-gv-T-OjLe4c-unsplash.jpeg" class="img-fluid portfolio-image" alt="">
+                                <a href="images/portfolio/You.jpg" class="image-popup">
+                                    <img src="images/portfolio/You.jpg" class="img-fluid portfolio-image" alt="">
                                 </a>
 
                                 <div class="portfolio-info">                     
-                                    <h4 class="portfolio-title mb-0">The gig economy</h4>
+                                    <!-- <h4 class="portfolio-title mb-0">The gig economy</h4>
 
-                                    <p class="text-info">Graphic</p>
+                                    <p class="text-info">Graphic</p> -->
                                 </div>
                             </div> 
                         </div>
@@ -281,10 +350,14 @@ https://templatemo.com/tm-567-nomad-force
                     <div class="row">
 
                         <div class="col-12">
-                            <h2 class="mb-5 text-center" data-aos="fade-up">News & Events</h2>
+                            <h2 class="mb-5 text-center" data-aos="fade-up">Planes & Paquetes</h2>
+                        </div>
+                        <div class="col-12">
+                            <h4 data-aos="fade-up">Eventos Estándar</h4>
+                            <p class="text-muted mb-4" data-aos="fade-up">Hasta 300 invitados/asistentes</p>
                         </div>
 
-                        <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                        <!-- <div class="col-lg-6 col-12 mb-5 mb-lg-0">
                             <div class="news-thumb" data-aos="fade-up">
                                 <a href="news-detail.html" class="news-image-hover news-image-hover-warning">
                                     <img src="images/news/caroline-lm-uqveD8dYPUM-unsplash.jpg" class="img-fluid large-news-image news-image" alt="">
@@ -353,7 +426,121 @@ https://templatemo.com/tm-567-nomad-force
                             </div> 
                         </div>
 
+                    </div> -->
+                    <!-- inicia seccion de pricing -->
+                    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                        <div class="col">
+                            <div class="card mb-4 rounded-3 shadow-sm">
+                                <div class="card-header py-3">
+                                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+                                    <h4 class="my-0 fw-normal">Basic</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title pricing-card-title">$15.00 mxn<small class="text-body-secondary fw-light">/QR</small></h2>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Gestor en línea de tu evento.</li>
+                                        <li>Lista de invitados (asistentes) digital.</li>
+                                        <li>Invitaciones digitales con QR.</li>
+                                        <li>Envío de invitación por Whatsapp.</li>
+                                        <li>Check-in en evento  con QR.</li>
+                                        <li>Soporte técnico 24/7.</li>
+                                    </ul>
+                                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card mb-4 rounded-3 shadow-sm">
+                                <div class="card-header py-3">
+                                    <h4 class="my-0 fw-normal">Standard</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>20 users included</li>
+                                        <li>10 GB of storage</li>
+                                        <li>Priority email support</li>
+                                        <li>Help center access</li>
+                                    </ul>
+                                    <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                                <div class="card-header py-3 text-bg-primary border-primary">
+                                    <h4 class="my-0 fw-normal">Premium</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>30 users included</li>
+                                        <li>15 GB of storage</li>
+                                        <li>Phone and email support</li>
+                                        <li>Help center access</li>
+                                    </ul>
+                                    <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <h2 class="display-6 text-center mb-4">Compare plans</h2>
+                    
+                    <div class="table-responsive">
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                <th style="width: 34%;"></th>
+                                <th style="width: 22%;">Basic</th>
+                                <th style="width: 22%;">Standar</th>
+                                <th style="width: 22%;">Premium</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-start">Public</th>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-start">Private</th>
+                                    <td></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                            </tbody>
+                    
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-start">Permissions</th>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-start">Sharing</th>
+                                    <td></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-start">Unlimited members</th>
+                                    <td></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                                <tr>
+                                <th scope="row" class="text-start">Extra security</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- termina seccion de pricing -->
                 </div>
             </section>
 
@@ -363,40 +550,40 @@ https://templatemo.com/tm-567-nomad-force
                         
                         <div class="col-lg-7 col-12 mx-auto">
 
-                            <h2 class="mb-4 text-center" data-aos="fade-up">Dont' be shy, write to us</h2>
+                            <h2 class="mb-4 text-center" data-aos="fade-up">Escríbenos, no seas tímid@!</h2>
 
                             <form action="#" method="post" class="contact-form" role="form" data-aos="fade-up">
 
-                                <div class="row">
+                                <div class="row mt-5">
                                     
                                     <div class="col-lg-6 col-6">
-                                        <label for="name" class="form-label">Name <sup class="text-danger">*</sup></label>
+                                        <label for="name" class="form-label">Nombre <sup class="text-danger">*</sup></label>
 
-                                        <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required>
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="Nombre completo" required>
                                     </div>
 
                                     <div class="col-lg-6 col-6">
                                         <label for="email" class="form-label">Email <sup class="text-danger">*</sup></label>
 
-                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required>
+                                        <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Correo electrónico" required>
                                     </div>
 
                                     <div class="col-12 my-4">
-                                        <label for="message" class="form-label">How can we help?</label>
+                                        <label for="message" class="form-label">Cómo podemos ayudarte?</label>
 
-                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Tell us about the project" required></textarea>
+                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Háblanos de tu evento" required></textarea>
                                         
                                     </div>
 
-                                    <div class="col-12">
-                                        <label for="services" class="form-label">Services<sup class="text-danger">*</sup></label>
+                                    <!-- <div class="col-12">
+                                        <label for="services" class="form-label">Servicios<sup class="text-danger">*</sup></label>
                                     </div>
 
                                     <div class="col-lg-4 col-12">
                                         <div class="form-check">
                                             <input type="checkbox" id="checkbox1" name="checkbox1" class="form-check-input">
 
-                                            <label class="form-check-label" for="checkbox1">Branding</label>
+                                            <label class="form-check-label" for="checkbox1">Marca</label>
                                           </div>
                                     </div>
 
@@ -404,7 +591,7 @@ https://templatemo.com/tm-567-nomad-force
                                         <div class="form-check">
                                             <input type="checkbox" id="checkbox2" name="checkbox2" class="form-check-input">
 
-                                            <label class="form-check-label" for="checkbox2">Digital Experiences</label>
+                                            <label class="form-check-label" for="checkbox2">Experiencias Digitales</label>
                                           </div>
                                     </div>
 
@@ -412,13 +599,13 @@ https://templatemo.com/tm-567-nomad-force
                                         <div class="form-check">
                                             <input type="checkbox" id="checkbox3" name="checkbox3" class="form-check-input">
 
-                                            <label class="form-check-label" for="checkbox3">Web Development</label>
+                                            <label class="form-check-label" for="checkbox3">Desarrollo Web</label>
                                           </div>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <div class="col-lg-5 col-12 mx-auto mt-5">
-                                    <button type="submit" class="form-control">Send Message</button>
+                                    <button type="submit" class="form-control">Enviar Mensaje</button>
                                 </div>
                             </form>
                         </div>
@@ -428,7 +615,7 @@ https://templatemo.com/tm-567-nomad-force
             </section>
 
             <section class="google-map">
-                <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" class="map-iframe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17761.446243180926!2d-102.57860423717837!3d22.774800204366418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86824e8e11d7d603%3A0x4196a8a29dca4635!2sZacatecas%20Centro%2C%20Zacatecas%2C%20Zac.!5e1!3m2!1ses!2smx!4v1726859143509!5m2!1ses!2smx" class="map-iframe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </section>
 
         </main>
@@ -440,7 +627,7 @@ https://templatemo.com/tm-567-nomad-force
                     <div class="col-12">
                         <h5 class="text-white">
                             <i class="bi-geo-alt-fill me-2"></i>
-                            State of Rio de Janeiro, Brazil
+                            Zacatecas, Zacatecas, México
                         </h5>
 
                         <a href="mailto:info@company.com" class="custom-link mt-3 mb-5">
@@ -449,12 +636,12 @@ https://templatemo.com/tm-567-nomad-force
                     </div>
 
                     <div class="col-6">
-                        < class="copyright-text mb-0">Copyright © Nomad Force 2021 
-                        
-                        <br><br>Design: <a href="https://templatemo.com/page/1" target="_parent">TemplateMo</a><br><br>
-                    
-                        Distributed By: <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-                    </p>
+                        <p class="copyright-text mb-0">Copyright © Smart-Event by GO 
+                            <br>
+                            <label>
+                                Diseñado: Local IT's
+                            </label><br>
+                        </p>
                     
                     </div>
 
