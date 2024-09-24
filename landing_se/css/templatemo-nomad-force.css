@@ -367,6 +367,25 @@ strong {
     bottom: 76px;
   }
 }
+@media screen and (max-width: 991px) {
+  .hero {
+    height: 70vh;
+  }
+  .heroText{
+    width: 30vh;
+  }
+  .custom-video,
+  .news-detail-image {
+    object-fit: cover;
+    width: auto;
+    height: 70vh;
+  }
+
+  .sticky-wrapper {
+    position: relative;
+    bottom: 76px;
+  }
+}
 
 .heroText {
   position: absolute;
@@ -374,7 +393,7 @@ strong {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
+  width: auto;
   text-align: center;
 }
 
