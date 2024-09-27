@@ -1,0 +1,689 @@
+<?php
+header('Cache-Control: public, max-age=86400'); // Cache por 1 día
+?>
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Smart-Event | Inicio</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link href="css/aos.css" rel="stylesheet">
+        <link href="css/templatemo-nomad-force.css" rel="stylesheet">
+        <script src="mail.js"></script>
+        <!-- <link href="css/pricing.css" rel="stylesheet"> -->
+<!--
+
+TemplateMo 567 Nomad Force
+
+https://templatemo.com/tm-567-nomad-force
+
+-->
+    </head>
+    <style>
+        /* Escritorio grande */
+    @media (min-width: 1200px) {
+        #logoBig {
+            width: auto;
+            height: 40%;
+        }
+
+        /* #logowide {
+            width: 40%;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        } */
+        #menucollapse{
+            display: none;
+        }
+    }
+
+    /* Escritorio pequeño y laptops */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        #logoBig {
+            width: auto;
+            height: 30%;
+        }
+
+        /* #logowide {
+            width: auto;
+            height: 10%;
+        } */
+    }
+
+    /* Tablets */
+    @media (min-width: 768px) and (max-width: 991px) {
+        #logoBig {
+            width: auto;
+            height: 30%;
+        }
+
+        /* #logowide {
+            width: auto;
+            height: 50%;
+        } */
+    }
+
+    /* Móviles grandes (smartphones) */
+    @media (min-width: 576px) and (max-width: 767px) {
+        #logoBig {
+            width: auto;
+            height: 30%;
+        }
+
+        /* #logowide {
+            width: auto;
+            height: 50%;
+        } */
+    }
+
+    /* Móviles pequeños */
+    @media (max-width: 575px) {
+        #logoBig {
+            width: auto;
+            height: 10%;
+        }
+
+        /* #logowide {
+            width: auto;
+            height: 50%;
+        } */
+    }
+    </style>
+    <body>
+    
+        <main>
+
+            <section class="hero" id="hero">
+                <div class="heroText">
+                    <img src="assets/brand/img/SmartEventLogoTxt.png" data-aos="zoom-in" data-aos-delay="500" alt="" id="logoBig" height="50%">
+                    <!-- <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
+                        Nomad Force
+                    </h1> -->
+
+                    <p class="text-secondary-white-color mt-1" data-aos="fade-up" data-aos-delay="1000">
+                        los mejores eventos sin <strong >contratiempos</strong>
+                    </p>
+                </div>
+
+                <div class="videoWrapper">
+                    <video autoplay="" loop="" muted="" class="custom-video" poster="videos/portada.jpg">
+                        <source src="videos/4783618_Wedding_Reception_1920x1080.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="overlay"></div>
+            </section>
+
+            <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/brand/img/SmartEventWide.png" alt="" id="logowide" width="" height="70">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="menucollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#hero">Inicio</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">Nosotros</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#portfolio">Clientes</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#news">Planes & Paquetes</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.html">Portal de Clientes</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="section-padding pb-0" id="about">
+                <div class="container mb-5 pb-lg-5">
+                    <div class="row">
+                        <!-- <div class="text-center">
+                            <img src="../assets/brand/img/decobar.jpg" class="img-fluid"  alt="" height="5" width="auto" data-aos="fade-up">
+                        </div> -->
+                        <div class="col-12">
+                            <h2 class="mb-3" data-aos="fade-up">Déjanos crear...</h2>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mt-3 mb-lg-5">
+                            <p class="me-4" data-aos="fade-up" data-aos-delay="300"><strong>La mejor experiencia para ti y tus invitados</strong> con un evento inteligente de principio a fin. Puedes estar seguro de que cada momento seará especial y libre de estrés.<br><br> Nuestro equipo de soporte está disponible <strong>24/7</strong> para resolver cualquier duda y asegurarse de que todo salga perfecto.<br><br><a rel="nofollow" href="#" style="font-weight: bold;">Smart-Event</a> está diseñado para ofrecerte una experiencia fluida y segura, desde la generación de invitaciones hasta el ingreso al evento.</p>
+                        </div>
+
+                        <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
+                            <p data-aos="fade-up" data-aos-delay="500">Con tecnología de vanguardia, garantizamos que cada asistente disfrute de un proceso de ingreso y acomodo <strong>rápido y sin complicaciones.</strong><br><br>Ofrecemos herramientas avanzadas para el control de acceso, monitoreo en tiempo real y análisis detallados post-evento. Ya sea un concierto, conferencia, festival, boda, XV años o cualquiera que sea tu evento, nuestro sistema <strong>se adapta completamente a tus necesidades</strong>.</p>
+                            <div class="text-end">
+                                <img src="assets/brand/img/SmartEventAlpha.png" alt="" width="auto" height="100" data-aos="fade-up" data-aos-delay="500">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-12 p-0">      
+                            <img src="assets/brand/img/Screenshot 2024-05-31 at 12-55Smart-Events Login(1).png" class="img-fluid about-image" alt="">
+                        </div>
+
+                        <div class="col-lg-3 col-12 bg-dark">  
+                            <div class="d-flex flex-column flex-wrap justify-content-center h-100 py-5 px-4 pt-lg-4 pb-lg-0">
+                                <h3 class="text-white mb-3" data-aos="fade-up">Somos - detallistas y metódicos.</h3>
+
+                                <p class="text-secondary-white-color" data-aos="fade-up">Tenemos más de dos años en el negocio de control y gestión de accesos.</p>
+
+                                <div class="mt-3 custom-links">
+                                    <a href="#portfolio" class="text-white custom-link" style="font-size: larger;" data-aos="zoom-in" data-aos-delay="100">Trabaja con nosotros!</a>
+                                    
+                                    <a href="#news" class="text-white custom-link" data-aos="zoom-in" data-aos-delay="300">Ver Planes & Paquetes</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 p-0">  
+                            <section id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="assets/brand/img/calendar-date-organizer-planner-concept.jpg" class="img-fluid team-image" alt="">
+
+                                        <div class="team-thumb bg-warning">
+                                            <h3 class="text-white mb-0">Planea</h3>
+
+                                            <p class="text-secondary-white-color mb-0">tus Eventos.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/brand/img/close-up-people-using-smartphones-restaurant(1).jpg" class="img-fluid team-image" alt="">
+
+                                        <div class="team-thumb bg-primary">
+                                            <h3 class="text-white mb-0">Registra asistencia</h3>
+
+                                            <p class="text-secondary-white-color mb-0">fácil y rápido.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/brand/img/happy-pretty-woman-listening-music-with-earphones.jpg" class="img-fluid team-image" alt="">
+
+                                        <div class="team-thumb bg-success">
+                                            <h3 class="text-white mb-0">Olvídate de</h3>
+
+                                            <p class="text-secondary-white-color mb-0">preocupaciones.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/brand/img/close-up-freelance-woman-writing.jpg" class="img-fluid team-image" alt="">
+
+                                        <div class="team-thumb bg-info">
+                                            <h3 class="text-white mb-0">Smart-Event</h3>
+
+                                            <p class="text-secondary-white-color mb-0">lo hará posible.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/brand/img/colleagues-giving-fist-bump.jpg" class="img-fluid team-image" alt="">
+
+                                        <div class="team-thumb bg-danger">
+                                            <h3 class="text-white mb-0">Nuestro equipo de soporte</h3>
+
+                                            <p class="text-secondary-white-color mb-0">estará para ayudarte.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding" id="portfolio">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <h2 class="mb-5 text-center" data-aos="fade-up">Nuestros Clientes</h2>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="portfolio-thumb mb-5" data-aos="fade-up">
+                                <a href="images/portfolio/Screenshot 2024-09-20 at 14-29-17 C&M (@candmco2018) • Instagram photos and videos.png" class="image-popup">
+                                    <img src="images/portfolio/Screenshot 2024-09-20 at 14-29-17 C&M (@candmco2018) • Instagram photos and videos.png" class="img-fluid portfolio-image" alt="">
+                                </a>
+
+                                <div class="portfolio-info">                     
+                                    <h4 class="portfolio-title mb-0"><a href="https://www.instagram.com/candmco2018/" target="_blank">CANDMCO</a></h4>
+
+                                    <p class="text-danger">Party Boutique and more</p>
+                                </div>
+                            </div> 
+
+                            <div class="portfolio-thumb" data-aos="fade-up">
+                                <a href="images/portfolio/somos_fca_halcon_azul_15.png" class="image-popup">
+                                    <img src="images/portfolio/somos_fca_halcon_azul_15.png" class="img-fluid portfolio-image" alt="">
+                                </a>
+
+                                <div class="portfolio-info">                     
+                                    <h4 class="portfolio-title mb-0">UAZ | FCA</h4>
+
+                                    <p class="text-success">Universidades</p>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="portfolio-thumb mt-5 mt-lg-0 mb-5" data-aos="fade-up">
+                                <a href="images/portfolio/juventud.jpg" class="image-popup">
+                                    <img src="images/portfolio/juventud.jpg" class="img-fluid portfolio-image" alt="">
+                                </a>
+
+                                <div class="portfolio-info">                     
+                                    <h4 class="portfolio-title mb-0">Instituto de la Juventud</h4>
+
+                                    <p class="text-warning">Gobierno</p>
+                                </div>
+                            </div> 
+
+                            <div class="portfolio-thumb" data-aos="fade-up">
+                                <a href="images/portfolio/You.jpg" class="image-popup">
+                                    <img src="images/portfolio/You.jpg" class="img-fluid portfolio-image" alt="">
+                                </a>
+
+                                <div class="portfolio-info">                     
+                                    <!-- <h4 class="portfolio-title mb-0">The gig economy</h4>
+
+                                    <p class="text-info">Graphic</p> -->
+                                </div>
+                            </div> 
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="news section-padding" id="news">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <h2 class="mb-5 text-center" data-aos="fade-up">Planes & Paquetes</h2>
+                        </div>
+                        <div class="col-12">
+                            <h4 data-aos="fade-up">Eventos Estándar</h4>
+                            <p class="text-muted mb-4" data-aos="fade-up">Hasta 300 invitados/asistentes</p>
+                        </div>
+
+                        <!-- <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                            <div class="news-thumb" data-aos="fade-up">
+                                <a href="news-detail.html" class="news-image-hover news-image-hover-warning">
+                                    <img src="images/news/caroline-lm-uqveD8dYPUM-unsplash.jpg" class="img-fluid large-news-image news-image" alt="">
+                                </a>
+
+                                <div class="news-category bg-warning text-white">News</div>
+                                
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a href="news-detail.html" class="news-title-link">The rise of the gig economy spells the end for these workers the old system</a>
+                                    </h5>
+
+                                    <span class="text-muted">22 hours ago</span>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                                <div class="news-top w-100">
+                                    
+                                    <a href="news-detail.html" class="news-image-hover news-image-hover-primary">
+                                        <img src="images/news/jean-philippe-delberghe-MmanXAs1sKw-unsplash.jpeg" class="img-fluid news-image" alt="">
+                                    </a>
+
+                                    <div class="news-category bg-primary text-white">Events</div>
+                                </div>
+                                
+                                <div class="news-bottom w-100">
+                                    <div class="news-text-info">
+                                        <h5 class="news-title">
+                                            <a href="news-detail.html" class="news-title-link">Job Opportunities: Digital, Marketing</a>
+                                        </h5>
+
+                                        <div class="d-flex flex-wrap">
+                                            <span class="text-muted me-2">
+                                                <i class="bi-geo-alt-fill me-1 mb-2 mb-lg-0"></i>
+                                                Alaska,
+                                            </span>
+
+                                            <span class="text-muted">August 6, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+
+                            <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                                <div class="news-top w-100" data-aos="fade-up">
+                                    
+                                    <a href="news-detail.html" class="news-image-hover news-image-hover-success">
+                                        <img src="images/news/maria-stewart-p4tj0g-_aMM-unsplash.jpeg" class="img-fluid news-image" alt="">
+                                    </a>
+
+                                    <div class="news-category bg-success text-white">News</div>
+                                </div>
+                                
+                                <div class="news-bottom w-100">
+                                    <div class="news-text-info">
+                                        <h5 class="news-title">
+                                            <a href="news-detail.html" class="news-title-link">What happened to new viral video?</a>
+                                        </h5>
+
+                                        <span class="text-muted">6 days ago</span>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+
+                    </div> -->
+                    <!-- inicia seccion de pricing -->
+                    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                        <div class="col">
+                            <div class="card mb-4 rounded-3 shadow-sm">
+                                <div class="card-header py-3">
+                                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="assets/brand/img/close-up-freelance-woman-writing.jpg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></img>
+                                    <h4 class="my-0 fw-normal">Básico C</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title pricing-card-title">$25MXN<small class="text-body-secondary fw-light">/QR</small></h2>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Gestor en línea de tu evento.</li>
+                                        <li>Lista de invitados (asistentes) digital.</li>
+                                        <li>Invitaciones digitales con QR.</li>
+                                        <li>Envío de invitación por Whatsapp.</li>
+                                        <li>Check-in en evento  con QR.</li>
+                                        <li>Soporte técnico 24/7.</li>
+                                    </ul>
+                                    <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card mb-4 rounded-3 shadow-sm">
+                                <div class="card-header py-3">
+                                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="assets/brand/img/planner-calendar-schedule-date-concept(1).jpg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></img>
+                                    <h4 class="my-0 fw-normal">Estándar C</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title pricing-card-title">$30MXN<small class="text-body-secondary fw-light">/QR</small></h2>
+                                    <ul class="list-unstyled mt-3 mb-5">
+                                        <li>Paquete Básico.</li>
+                                        <li style="font-size: larger;">+</li>
+                                        <li>Mapa virtual del evento.</li>
+                                        <li>Asignación Digital de lugares a invitados.</li>
+                                        <li>Envío masivo de alertas/noticias.</li>
+                                        <li> </li>
+                                    </ul>
+                                    <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                                <div class="card-header py-3">
+                                    <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="assets/brand/img/woman-booking-ticket-online.jpg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></img>
+                                    <h4 class="my-0 fw-normal">Premium C</h4>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title pricing-card-title">$35MXN<small class="text-body-secondary fw-light">/QR</small></h2>
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li>Paquete Básico.</li>
+                                        <li>Paquete Estándar.</li>
+                                        <li style="font-size: larger;">+</li>
+                                        <li>Galería de fotos de tu evento con QR descargable**</li>
+                                        <li>Generación automatizada de reconocimientos/agradecimientos.</li>
+                                    </ul>
+                                    <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2 class="display-6 text-center mb-4" style="font-weight: bold;">¿Tienes más invitados/asistentes?</h2>
+                    <div class="col-lg-6 col-12 mt-3">
+                        <img src="assets/brand/img/female-teen-girl-stand-feel-freedom-relaxation-travel-outdoor-enjoying-nature-with-sunrise.jpg" class="img-fluid portfolio-image" width="auto" height="70%" alt="">
+                    </div>
+                    <div class="col-lg-6 col-12 mt-5">
+                        <p class="ms-4 mb-3" data-aos="fade-up" data-aos-delay="300">No te preocupes <strong>tenemos el plan perfecto para tu evento</strong>, ponte en contacto con nosotros y en breve nuestro equipo de soporte te brindará la mejor opción para ti y tu evento. <br><br><a href="#contact">Aquí tienes un documento</a> con todo lo que necesitas saber de Smart-Event.</p>
+                        <br>
+                        <img class="ms-4" src="assets/brand/img/SmartEventAlpha.png" width="auto" height="18%" alt="">
+                        <br>
+                        <br>
+                        <div class="d-grid gap-2">
+                            <a class="btn btn-secondary" href="#contact" type="button">e-Book</a>
+                        </div>
+                    </div>
+                    <!-- <div class="table-responsive">
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                <th style="width: 34%;"></th>
+                                <th style="width: 22%;">Basic</th>
+                                <th style="width: 22%;">Standar</th>
+                                <th style="width: 22%;">Premium</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-start">Public</th>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-start">Private</th>
+                                    <td></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                            </tbody>
+                    
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-start">Permissions</th>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-start">Sharing</th>
+                                    <td></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-start">Unlimited members</th>
+                                    <td></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                                <tr>
+                                <th scope="row" class="text-start">Extra security</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+                    <!-- termina seccion de pricing -->
+
+                </div>
+            </section>
+
+            <section class=" contact section-padding" id="contact">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-lg-7 col-12 mx-auto">
+
+                            <h2 class="mb-4 text-center" data-aos="fade-up">Escríbenos, no seas tímid@!</h2>
+                            <div class="row mt-5">
+                                <div class="col-lg-6 col-6">
+                                    <label for="name" class="form-label">Nombre <sup class="text-danger">*</sup></label>
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Nombre completo" required>
+                                </div>
+                                <div class="col-lg-6 col-6">
+                                    <label for="email" class="form-label">Email <sup class="text-danger">*</sup></label>
+                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Correo electrónico" required>
+                                </div>
+
+                                <div class="col-12 my-4">
+                                    <label for="message" class="form-label">Cómo podemos ayudarte?</label>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Háblanos de tu evento" required></textarea>
+                                </div>
+
+                                <!-- <div class="col-12">
+                                    <label for="services" class="form-label">Servicios<sup class="text-danger">*</sup></label>
+                                </div>
+
+                                <div class="col-lg-4 col-12">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="checkbox1" name="checkbox1" class="form-check-input">
+
+                                        <label class="form-check-label" for="checkbox1">Marca</label>
+                                        </div>
+                                </div>
+
+                                <div class="col-lg-4 col-12 my-2 my-lg-0">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="checkbox2" name="checkbox2" class="form-check-input">
+
+                                        <label class="form-check-label" for="checkbox2">Experiencias Digitales</label>
+                                        </div>
+                                </div>
+
+                                <div class="col-lg-4 col-12">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="checkbox3" name="checkbox3" class="form-check-input">
+
+                                        <label class="form-check-label" for="checkbox3">Desarrollo Web</label>
+                                        </div>
+                                </div> -->
+                            </div>
+
+                            <div class="col-lg-5 col-12 mx-auto mt-5">
+                                <button type="button" class="form-control" onclick="email2()">Enviar Mensaje</button>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17761.446243180926!2d-102.57860423717837!3d22.774800204366418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86824e8e11d7d603%3A0x4196a8a29dca4635!2sZacatecas%20Centro%2C%20Zacatecas%2C%20Zac.!5e1!3m2!1ses!2smx!4v1726859143509!5m2!1ses!2smx" class="map-iframe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <h5 class="text-white">
+                            <i class="bi-geo-alt-fill me-2"></i>
+                            Zacatecas, Zacatecas, México
+                        </h5>
+
+                        <a href="mailto:info@smartevent.com.mx" class="custom-link mt-3 mb-5">
+                            info@smartevent.com.mx
+                        </a>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="copyright-text mb-0">Copyright © Smart-Event by GO 
+                            <br>
+                            <label>
+                                Diseñado: Local IT's
+                            </label><br>
+                        </p>
+                    
+                    </div>
+
+                    <div class="col-lg-3 col-5 ms-auto">
+                        <ul class="social-icon">
+                            <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+                            <li><a href="#" class="social-icon-link bi-twitter"></a></li>
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/magnific-popup-options.js"></script>
+        <script src="js/scrollspy.min.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
