@@ -128,11 +128,11 @@ session_start();
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 ms-4 justify-content-center mb-md-0">
           <li><a href="#" class="nav-link px-2 text-light"><i class="bi bi-houses"></i> Inicio</a></li>
-          <li><a href="alta_eventos.php" class="nav-link px-2 text-light" hidden><i class="bi bi-plus-circle"></i> Agregar evento</a></li>
           <li><a href="alta_sitio.php" class="nav-link px-2 text-light" hidden><i class="bi bi-plus-circle"></i> Agregar sitio</a></li>
           <li><a href="alta_asistentes.php" class="nav-link px-2 text-light"><i class="bi bi-plus-circle"></i> Pre-registro</a></li>
           <li><a href="lista_eventos.php" class="nav-link px-2 text-light" hidden><i class="bi bi-list-check"></i> Lista eventos</a></li>
           <li><a href="lista_asistentes.php" class="nav-link px-2 text-light"><i class="bi bi-list-check"></i> Lista asistentes</a></li>
+          <li><a href="../eventos/index.php" class="nav-link px-2 text-light" ><i class="bi bi-qr-code-scan"></i> QR Check-in</a></li>
         </ul>
 
         <div class="text-end">

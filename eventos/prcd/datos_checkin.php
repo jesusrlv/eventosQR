@@ -12,38 +12,19 @@
         $resultadoSql = $conn->query($sql);
         $rowQuery = $resultadoSql->fetch_assoc();
 
-        // semestre
-        $semestre = $rowQuery['semestre'];
-        $sqlSemestre = "SELECT * FROM semestre WHERE id = '$semestre'";
-        $resultadoSemestre = $conn->query($sqlSemestre);
-        $rowSemestre = $resultadoSemestre->fetch_assoc();
-
-        // carrera
-        $carrera = $rowQuery['carrera'];
-        $sqlCarrera = "SELECT * FROM programa WHERE id = '$carrera'";
-        $resultadoCarrera = $conn->query($sqlCarrera);
-        $rowCarrera = $resultadoCarrera->fetch_assoc();
 
         echo'
         <p class="pb-3 mb-0 small lh-sm border-bottom">
               <strong class="d-block text-gray-dark">Nombre completo:</strong>
-              '.$rowQuery['nombre'].' '.$rowQuery['apellidos'].'
+              '.$rowQuery['nombre'].'
             </p>
             <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
-              <strong class="d-block text-gray-dark">Semestre:</strong>
-              '.$rowQuery['semestre'].'
+              <strong class="d-block text-gray-dark">Mesa:</strong>
+              '.$rowQuery['no_mesa'].'
             </p>
             <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
-              <strong class="d-block text-gray-dark">Grupo:</strong>
-              '.$rowQuery['grupo'].'
-            </p>
-            <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
-              <strong class="d-block text-gray-dark">Carrera:</strong>
-              '.$rowQuery['carrera'].'
-            </p>
-            <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
-              <strong class="d-block text-gray-dark">Número de control:</strong>
-              '.$rowQuery['numero_control'].'
+              <strong class="d-block text-gray-dark">Número de invitados:</strong>
+              '.$rowQuery['pax_mesa'].'
             </p>
         ';
 

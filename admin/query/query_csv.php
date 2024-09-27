@@ -19,6 +19,8 @@
     
 <?php    
 
+    
+
     session_start();
     include('../prcd/qc.php');
 
@@ -71,7 +73,7 @@
                 $codigo = generarCodigo(9);
 
                 // Get row data
-                $nombre = $getData[0];
+                $nombre = utf8_encode($getData[0]);
                 $pais =$getData[1];
                 $telefono = $getData[2];
                 $email = $getData[3];
@@ -79,11 +81,18 @@
                 $tipo = $getData[5];
                 $pax = $getData[6];
 
-                $telefono = $pais.''.$telefono;
+                $telefono = $pais.$telefono;
 
                 $idQr = $codigo;
                                 
-                    mysqli_query($conn, "INSERT INTO asistentes (nombre, telefono, email, no_mesa, tipo_invitado, pax_mesa, idQr) VALUES ('" . $nombre . "', '" . $telefono . "', '" . $email . "', '" . $mesa . "','".$tipo."',,'".$pax."', '" . $idQr . "')");
+                    mysqli_query($conn, "INSERT INTO asistentes (nombre, telefono, email, no_mesa, tipo_invitado, pax_mesa, idQr) VALUES ('" . $nombre . "', '" . $telefono . "', '" . $email . "', '" . $mesa . "','".$tipo."','".$pax."', '" . $idQr . "')");
+                    if(mysqli_query){
+                        echo "Se registr¨®";
+                    }
+                    else{
+                        $error = $conn->error;
+                        echo $error;
+                    }
             }
 
             // Close opened CSV file

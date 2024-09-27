@@ -90,6 +90,15 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+      
+      @media only screen and (max-width: 600px) and (min-width: 400px)  {
+          #checkDiv{
+              width:300px;
+          }
+          #textoResp{
+              font-size:5px;
+          }
+      }
     </style>
 
     
@@ -126,29 +135,29 @@
     <h4 class="text-secondary ms-5 mt-2 mb-4">NOMBRE DEL EVENTO: <span class="text-dark"><strong><?php echo $rowEventos['nombre'] ?></strong></span></h4>
   </div>
 
-  <div class="container-fluid w-100 h-100" style="width:100%">
+  <div class="container w-100 h-100" style="width:100%">
     <div class="row mb-0 border-bottom">
-      <div class="col-4 border-end p-3 align-self-center" style="background-color:#f8f9fa;">
+      <div class="col-sm-4 border-end p-3 align-self-center" style="background-color:#f8f9fa;">
         <div class="container p-5 border rounded bg-white shadow-sm" style="font-family: 'Poppins', sans-serif;">
 
-          <p style="font-size:90px" class="text-center border-bottom mb-3">
+          <p style="font-size:90px" class="text-center border-bottom mb-3 p-3">
             <img src="../assets/brand/img/Novios.png" alt="" width="170px" id="logo_lateral">
           </p>
 
           <div id="checkDiv" class="mt-3">
             <p class="pb-3 mb-0 small lh-sm border-bottom">
-              <strong class="d-block text-gray-dark">Nombre:</strong>
+              <strong class="d-block text-gray-dark" id="textoResp">Nombre:</strong>
               Nombre 
             </p>
             <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
               <strong class="d-block text-gray-dark"># de Mesa:</strong>
               No. de Mesa asignada
             </p>
-            <!-- <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
-              <strong class="d-block text-gray-dark">Especialidad:</strong>
-              Especialidad
+             <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
+              <strong class="d-block text-gray-dark">No. personas:</strong>
+              No. de Personas
             </p>
-            <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
+            <!-- <p class="pb-3 mt-3 mb-0 small lh-sm border-bottom">
               <strong class="d-block text-gray-dark">Semestre:</strong>
               Semestre
             </p>
@@ -160,15 +169,20 @@
 
         </div>
       </div>
-      <div class="col-7 border-start align-self-center justify-content-center">
-        <p><button class="btn btn-primary ms-2" onclick="abrirCamara()"><i class="bi bi-qr-code"></i> Leer QR</button> <button class="btn btn-danger"  id="botonCerrar"><i class="bi bi-qr-code"></i> Cerrar QR</button></p>
-        <div class="card w-75 text-center" style="height:500px">
+      <div class="col-sm-8 border-start align-self-center justify-content-center">
+        <p class="mt-3"><button class="btn btn-primary ms-2" onclick="abrirCamara()"><i class="bi bi-qr-code"></i> Leer QR</button> <button class="btn btn-danger"  id="botonCerrar"><i class="bi bi-qr-code"></i> Cerrar QR</button></p>
+        <p><select name="cameraCanje" class="form-select">
+                    <option value="1"><i class="bi bi-camera-video-fill"></i> Frontal Cam</option>
+                    <option value="2"><i class="bi bi-camera-video"></i> Back Cam</option>
+                  </select></p>
+        <div class="card text-center" style="height:500px; width:100%">
           <div class="card-header text-light" style="background-color:#8a608a;">
           <i class="bi bi-camera-fill"></i> Cámara de registro de asistentes
           </div>
             <div class="card-body text-center">
-              <img src="../assets/brand/img/SmartEventAlpha.png" style="max-width: 400px;"  alt="" id="imagenFCA">
-              <video id="preview" class="w-100 h-100" style="max-height:810px" hidden></video>  
+              <img src="../assets/brand/img/SmartEventAlpha.png" style="max-width: 500px;"  alt="" id="imagenFCA">
+              <video id="preview" class="w-100 h-100" style="max-height:500px" hidden></video>  
+              
           </div>
           <p hidden><input type="text" id="textQR" onchange="checkIn()"></p>
           <p hidden><input type="text" id="evento" value="<?php echo $idEventos ?>"></p>
@@ -181,10 +195,10 @@
 </main>
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-muted">&copy; 2022 UACYA | UAZ</p>
+        <p class="col-md-4 mb-0 text-muted">&copy; Smart-event | 2023</p>
 
         <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-        <img src="../assets/brand/img/SmartEventLogoLight.png" width="auto" height="80" role="img" alt="" class="p-2 rounded" style="background-color:#b0b8b4;">
+        <!-- <img src="../assets/brand/img/SmartEventLogoLight.png" width="auto" height="80" role="img" alt="" class="p-2 rounded" style="background-color:#b0b8b4;"> -->
         </a>
 
         <ul class="nav col-md-4 justify-content-end">

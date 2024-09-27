@@ -1,0 +1,136 @@
+[17-Jun-2023 09:57:40 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 09:57:42 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 09:57:57 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 09:58:02 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 09:59:45 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 09:59:48 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 09:59:53 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 10:00:41 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 10:00:48 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 10:01:19 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 10:01:26 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 10:03:54 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 10:03:57 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 10:03:59 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 10:04:01 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 11:26:33 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 11:26:35 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 11:26:42 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 11:28:23 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 11:28:29 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 11:28:31 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 11:28:32 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 11:29:38 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 11:29:55 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 11:37:10 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 11:45:03 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 12:34:35 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[17-Jun-2023 12:52:31 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[19-Jun-2023 13:48:01 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[19-Jun-2023 13:49:51 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[26-Jul-2023 17:59:19 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[16-Nov-2023 14:49:57 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[16-Nov-2023 14:50:03 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php:35
+Stack trace:
+#0 {main}
+  thrown in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 35
+[26-Sep-2024 09:58:00 America/Mexico_City] PHP Warning:  Trying to access array offset on value of type null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 135
+[26-Sep-2024 09:59:28 America/Mexico_City] PHP Warning:  Trying to access array offset on value of type null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 135
+[26-Sep-2024 10:02:28 America/Mexico_City] PHP Warning:  Trying to access array offset on value of type null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 135
+[26-Sep-2024 10:04:43 America/Mexico_City] PHP Warning:  Trying to access array offset on value of type null in /home4/smarteve/public_html/eventosQR/eventos/checkin.php on line 135

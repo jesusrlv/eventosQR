@@ -96,6 +96,7 @@
           <li><a href="alta_asistentes.php" class="nav-link px-2 text-light"><i class="bi bi-plus-circle"></i> Pre-registro</a></li>
           <!-- <li><a href="lista_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-list-check"></i> Lista eventos</a></li> -->
           <li><a href="#" class="nav-link px-2 text-light"><i class="bi bi-list-check"></i> Lista asistentes</a></li>
+          <li><a href="../eventos/index.php" class="nav-link px-2 text-light" ><i class="bi bi-qr-code-scan"></i> QR Check-in</a></li>
         </ul>
 
         <div class="text-end">
@@ -152,9 +153,7 @@
             <th scope="col">Teléfono (WA)</th>
             <th scope="col">E-mail</th>
             <th scope="col">No. Mesa</th>
-            <th scope="col"><small>QR</small></th>
-            <th scope="col"><small><i class="bi bi-envelope text-primary"></i> Email</small></th>
-            <th scope="col"><small><i class="bi bi-whatsapp text-success"></i> WhatsApp</small></th>
+            <th scope="col">Hora llegada</th>
             </tr>
         </thead>
         <tbody id="myTable">
@@ -227,10 +226,10 @@
       cache: false,
         success: function(data) {
           $("#myTable").html(data);
-          var id = document.getElementById('evento').value;
-          $("#link").attr('href','constanciaPDF_masivas.php?id='+id);
-          $("#idCsv").attr('value',+id);
-          $("#link").attr('target','_blank');
+          //var id = document.getElementById('evento').value;
+          //$("#link").attr('href','constanciaPDF_masivas.php?id='+id);
+          //$("#idCsv").attr('value',+id);
+          //$("#link").attr('target','_blank');
 
       }               
     });

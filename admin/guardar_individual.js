@@ -11,7 +11,7 @@ $(document).ready(function() {
     var tipo = document.getElementById("tipoInvitado").value;
     var paxMesa = document.getElementById("paxMesa").value;
 
-    if (nombre == "" || telefono == "" || email == "" || mesa=="" || tipo ==""){
+    if (nombre == "" || telefono == "" || mesa=="" || tipo ==""){
         alert("Se deben llenar todos los campos");
         return;
     }

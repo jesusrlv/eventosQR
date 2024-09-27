@@ -4,7 +4,6 @@
 
               document.getElementById("imagenFCA").hidden = true;  
               document.getElementById("preview").hidden = false;  
-
               let scanner = new Instascan.Scanner({video:document.getElementById('preview') });
               scanner.addListener('scan', function (content) {
                 console.log(content);
@@ -12,6 +11,29 @@
               Instascan.Camera.getCameras().then(function(cameras) {
                 if (cameras.length > 0) {
                   scanner.start(cameras[0]);
+                  //inicia backcamera
+                  $('[name="cameraCanje"]').on('change',function(){
+                    if($(this).val()==1){
+                      if(cameras[0]!=""){
+                        scanner.start(cameras[0]);
+                      }
+                      else{
+                        alert('No hay camaras');
+                      }
+                      }
+                      else if($(this).val()==2){
+                      if(cameras[1]!=""){
+                        scanner.start(cameras[1]);
+                      }
+                      else{
+                        alert('No hay camaras');
+                      }
+                    }
+                    
+
+                  });
+                  
+// code front-back camera
                 } else {
                   // console.error('No cameras found.');
                   alert("No se encontró cámara");

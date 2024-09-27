@@ -1,21 +1,14 @@
 <?php
 include('../prcd/qc.php');
-if(empty($_POST['busqueda']) || ($_POST['busqueda'] == null)){
-    echo'
-        <tr>
-            <td colspan="9" class="text-center table-danger">Sin datos</td>
-        </tr>
-        ';
-
-}
-else if(isset($_POST['busqueda'])){
-$variable = $_POST['busqueda'];
-$var = "SELECT * FROM asistentes WHERE nombre LIKE '%$variable%' OR telefono LIKE '%$variable%' OR email LIKE '%$variable%' OR no_mesa LIKE '%$variable%'";
+$var = "SELECT * FROM asistentes ORDER BY no_mesa";
 $resultadoVariable = $conn->query($var);
-$filaVar = $resultadoVariable->num_rows;
-    if($filaVar > 0){
+
     $x=0;
+    $y=0;
         while($rowVar = $resultadoVariable->fetch_assoc()){
+            if($rowVar['pax_mesa'] == 1 || $rowVar['pax_mesa'] == 2 || $rowVar['pax_mesa'] == 3 || $rowVar['pax_mesa'] == 4 || $rowVar['pax_mesa'] == 5 || $rowVar['pax_mesa'] ==6 || $rowVar['pax_mesa'] ==7 || $rowVar['pax_mesa'] ==8 || $rowVar['pax_mesa'] ==9 || $rowVar['pax_mesa'] ==10 || $rowVar['pax_mesa'] ==11 || $rowVar['pax_mesa'] ==12 || $rowVar['pax_mesa'] ==13 || $rowVar['pax_mesa'] ==14 || $rowVar['pax_mesa'] ==15 || $rowVar['pax_mesa'] ==16 || $rowVar['pax_mesa'] ==17 || $rowVar['pax_mesa'] ==18 || $rowVar['pax_mesa'] ==19 || $rowVar['pax_mesa'] ==20 || $rowVar['pax_mesa'] ==21 || $rowVar['pax_mesa'] ==22 || $rowVar['pax_mesa'] ==23 || $rowVar['pax_mesa'] ==24 || $rowVar['pax_mesa'] ==25 || $rowVar['pax_mesa'] ==26 || $rowVar['pax_mesa'] ==27 || $rowVar['pax_mesa'] ==28 || $rowVar['pax_mesa'] ==29 || $rowVar['pax_mesa'] ==30){
+            
+                
             $x++;
             $concatenado = $rowVar['idQr'];
             echo'
@@ -26,14 +19,6 @@ $filaVar = $resultadoVariable->num_rows;
                 <td>'.$rowVar['email'].'</td>
                 <td>'.$rowVar['no_mesa'].'</td>
                 <td>'.$rowVar['pax_mesa'].'</td>
-                <td>';
-                ?>
-
-                <a href="#" style="text-decoration:none" data-bs-toggle="modal" data-bs-target="#editarModal" onclick="ModalEditar('<?php echo $concatenado ?>')"><i class="bi bi-pencil-square"></i></a>
-
-                <?php
-                echo'
-                </td>
                 <td>';
                 ?>
 
@@ -63,13 +48,13 @@ $filaVar = $resultadoVariable->num_rows;
         ';
 
         }
-    }
-    else{
-        echo'
-        <tr>
-            <td colspan="9" class="text-center table-danger">Sin datos</td>
-        </tr>
-        ';
-    }
-}
+        else{
+            $y++;
+            echo "
+            <script>
+            console.log(".$y.");
+            </script>";
+        }
+        }
+    
 ?>

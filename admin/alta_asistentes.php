@@ -125,6 +125,7 @@
           <li><a href="#" class="nav-link px-2 text-light"><i class="bi bi-plus-circle"></i> Pre-registro</a></li>
           <!-- <li><a href="lista_eventos.php" class="nav-link px-2 text-light"><i class="bi bi-list-check" hidden></i> Lista eventos</a></li> -->
           <li><a href="lista_asistentes.php" class="nav-link px-2 text-light"><i class="bi bi-list-check"></i> Lista asistentes</a></li>
+          <li><a href="../eventos/index.php" class="nav-link px-2 text-light" ><i class="bi bi-qr-code-scan"></i> QR Check-in</a></li>
         </ul>
 
         <div class="text-end">
@@ -153,17 +154,17 @@
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-<form id="formAlta">
+        <form id="formAlta">
 
-<div class="row">
+        <div class="row">
   
-    <div class="col-6">
+    <div class="col-sm-6">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-plus-fill"></i></span>
           <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" name="nombre" id="nombreAlta" required>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-sm-6">
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"><i class="bi bi-globe-americas"></i></span>
         <select class="form-select" id="internacional" aria-label="Default select example">
@@ -174,25 +175,25 @@
         <input type="text" class="form-control" style="width: 50%;" placeholder="Teléfono" aria-label="Teléfono" aria-describedby="basic-addon1" name="Teléfono" id="telefonoAlta" required >
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-sm-6">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
           <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" name="email" id="emailAlta" required>
       </div>
     </div>
-    <div class="col-2">
+    <div class="col-sm-2">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-map"></i></span>
           <input type="text" class="form-control" placeholder="Mesa" aria-label="Mesa" aria-describedby="basic-addon1" name="Mesa" id="mesaAlta" required>
       </div>
     </div>
-    <div class="col-2">
+    <div class="col-sm-2">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill-exclamation"></i></span>
           <input type="text" class="form-control" placeholder="PAX por mesa" aria-label="" aria-describedby="basic-addon1" name="invitadosMesa" id="paxMesa">
       </div>
     </div>
-    <div class="col-2">
+    <div class="col-sm-2">
       <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-lines-fill"></i></span>
           <select class="form-select" id="tipoInvitado" aria-label="Default select example">
@@ -243,24 +244,27 @@
           <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
           <input type="text" class="form-control" placeholder="Escribe los datos del asistente" aria-label="Username" aria-describedby="basic-addon1" id="busquedaAdmin1" oninput="busquedaAdmin()">
         </div>
-        <table class="table">
-          <thead>
-            <tr class="text-center">
-              <th scope="col"><small>#</small></th>
-              <th scope="col"><small>Nombre</small></th>
-              <th scope="col"><small>Teléfono</small></th>
-              <th scope="col"><small>Email</small></th>
-              <th scope="col"><small>Mesa</small></th>
-              <th scope="col"><small>Editar</small></th>
-              <th scope="col"><small>QR</small></th>
-              <th scope="col"><small><i class="bi bi-envelope text-primary"></i> Email</small></th>
-              <th scope="col"><small><i class="bi bi-whatsapp text-success"></i> WhatsApp</small></th>
-            </tr>
-          </thead>
+        <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr class="text-center">
+                  <th scope="col"><small>#</small></th>
+                  <th scope="col"><small>Nombre</small></th>
+                  <th scope="col"><small>Teléfono</small></th>
+                  <th scope="col"><small>Email</small></th>
+                  <th scope="col"><small>Mesa</small></th>
+                  <th scope="col"><small>Pax</small></th>
+                  <th scope="col"><small>Editar</small></th>
+                  <th scope="col"><small>QR</small></th>
+                  <th scope="col"><small><i class="bi bi-envelope text-primary"></i> Email</small></th>
+                  <th scope="col"><small><i class="bi bi-whatsapp text-success"></i> WhatsApp</small></th>
+                </tr>
+              </thead>
           <tbody id="txtHint" class="text-center">
             
           </tbody>
         </table>
+        </div>
 
       </div>
     </div>
@@ -270,6 +274,36 @@
 
   <!-- <div class="b-example-divider"> -->
   </div>
+  
+      <!-- tabla visitantes -->
+      
+      <div class="container mt-5">
+          <h3>Listado completo de invitados</h3>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr class="text-center">
+                  <th scope="col"><small>#</small></th>
+                  <th scope="col"><small>Nombre</small></th>
+                  <th scope="col"><small>Teléfono</small></th>
+                  <th scope="col"><small>Email</small></th>
+                  <th scope="col"><small>Mesa</small></th>
+                  <th scope="col"><small>Pax</small></th>
+                  <th scope="col"><small>QR</small></th>
+                  <th scope="col"><small><i class="bi bi-envelope text-primary"></i> Email</small></th>
+                  <th scope="col"><small><i class="bi bi-whatsapp text-success"></i> WhatsApp</small></th>
+                </tr>
+              </thead>
+              <tbody class="text-center">
+                <?php include("query/query_lista_completa.php"); ?>
+              </tbody>
+            </table>
+          </div>
+      </div>
+      
+    <!-- tabla visitantes -->
+
+
 
 </main>
 <div class="container">
